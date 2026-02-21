@@ -1,541 +1,131 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProSys | Professional Business Systems</title>
-    <!-- تحسين الخط مع إضافة أوزان أكثر للمرونة -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- إضافة مكتبة أيقونات Font Awesome لإضفاء لمسات عصرية -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* ===== متغيرات أساسية ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: #0c111d;
-            color: #e2e8f0;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ===== تصميم محسن للهيدر ===== */
-        .hero {
-            position: relative;
-            text-align: center;
-            padding: 130px 0 140px;
-            background: radial-gradient(circle at 70% 20%, #1a2a44, #0b101c 80%);
-            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 4.2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #38bdf8, #7dd3fc, #a5f3fc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-            text-shadow: 0 5px 15px rgba(56, 189, 248, 0.3);
-        }
-
-        .hero h2 {
-            font-size: 1.9rem;
-            font-weight: 500;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .hero h2 span {
-            display: inline-block;
-            background: rgba(56, 189, 248, 0.15);
-            padding: 5px 20px;
-            border-radius: 60px;
-            font-size: 1.2rem;
-            color: #7dd3fc;
-            margin-top: 15px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-        }
-
-        .hero p {
-            font-size: 1.35rem;
-            max-width: 800px;
-            margin: 30px auto 40px;
-            color: #b0c4de;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(8px);
-            padding: 20px 30px;
-            border-radius: 70px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* الأزرار المحسنة */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            padding: 16px 38px;
-            margin: 8px 12px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-primary {
-            background: linear-gradient(145deg, #38bdf8, #0ea5e9);
-            color: #0f172a;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(145deg, #4ac7ff, #1e9fd8);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px -5px #38bdf880;
-            border-color: #a5f3fc;
-        }
-
-        .btn-secondary {
-            background: linear-gradient(145deg, #22c55e, #16a34a);
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: linear-gradient(145deg, #2ed76a, #1dbb54);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px -5px #22c55e80;
-            border-color: #bbf7d0;
-        }
-
-        /* ===== أقسام عامة ===== */
-        .section {
-            padding: 100px 0;
-            border-bottom: 1px solid rgba(56, 189, 248, 0.08);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 70px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            display: inline-block;
-            background: linear-gradient(to left, #f0f9ff, #38bdf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            padding-bottom: 15px;
-            position: relative;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20%;
-            width: 60%;
-            height: 4px;
-            background: linear-gradient(90deg, transparent, #38bdf8, #22c55e, transparent);
-            border-radius: 4px;
-        }
-
-        /* ===== فيديو ===== */
-        .video-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
-        iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 430px;
-            border-radius: 30px;
-            box-shadow: 0 30px 40px -15px black;
-            border: 2px solid rgba(56, 189, 248, 0.3);
-        }
-
-        /* ===== بطاقات المميزات (نفس المحتوى) ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .feature-card {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(56, 189, 248, 0.15);
-            border-radius: 40px;
-            padding: 35px 20px;
-            text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 20px 30px -10px #00000080;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: #38bdf8;
-            box-shadow: 0 30px 40px -12px #38bdf870;
-        }
-
-        .feature-card i {
-            font-size: 48px;
-            color: #38bdf8;
-            margin-bottom: 25px;
-            background: rgba(56, 189, 248, 0.1);
-            width: 85px;
-            height: 85px;
-            line-height: 85px;
-            border-radius: 30px;
-            display: inline-block;
-            text-align: center;
-            border: 1px solid #38bdf8;
-        }
-
-        .feature-card p {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #e0f2fe;
-        }
-
-        /* ===== بطاقات البرامج (نفس الأسماء والروابط) ===== */
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .program-card {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 35px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .program-card:hover {
-            border-color: #22c55e;
-            transform: scale(1.02);
-            background: #1e2a41;
-        }
-
-        .program-card i {
-            font-size: 48px;
-            color: #22c55e;
-            margin-bottom: 20px;
-        }
-
-        .program-card a {
-            color: #38bdf8;
-            font-weight: 800;
-            font-size: 1.7rem;
-            text-decoration: none;
-            transition: 0.2s;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
-
-        .program-card a:hover {
-            color: #7dd3fc;
-            transform: translateY(-3px);
-        }
-
-        .program-card p {
-            color: #b8c9e3;
-            font-size: 1.05rem;
-        }
-
-        /* ===== لماذا ProSys ===== */
-        .why-box {
-            background: linear-gradient(145deg, #1e2a3a, #0f1a2f);
-            padding: 55px 45px;
-            border-radius: 70px;
-            border: 1px solid #38bdf833;
-            max-width: 950px;
-            margin: 0 auto;
-            box-shadow: 0 30px 40px -20px black;
-        }
-
-        .why-box p {
-            font-size: 1.4rem;
-            color: #d9e6f5;
-            line-height: 1.8;
-            font-weight: 500;
-        }
-
-        /* ===== الأسئلة الشائعة ===== */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            text-align: right;
-        }
-
-        .faq-item {
-            background: rgba(20, 30, 45, 0.7);
-            backdrop-filter: blur(6px);
-            border: 1px solid #38bdf8;
-            border-radius: 40px;
-            padding: 30px;
-        }
-
-        .faq-item h4 {
-            color: #38bdf8;
-            font-size: 1.7rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .faq-item p {
-            color: #cbd5e1;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* ===== قسم الاتصال ===== */
-        .contact-wrapper {
-            background: rgba(56, 189, 248, 0.05);
-            border-radius: 70px;
-            padding: 50px 30px;
-            border: 1px solid #38bdf840;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0 0;
-        }
-
-        .contact-item {
-            background: #1e2b41;
-            padding: 25px 35px;
-            border-radius: 60px;
-            border: 1px solid #38bdf8;
-            min-width: 260px;
-        }
-
-        .contact-item i {
-            font-size: 30px;
-            color: #38bdf8;
-            margin-left: 15px;
-        }
-
-        .contact-item a {
-            color: #7dd3fc;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== الفوتر ===== */
-        .footer {
-            background: #020617;
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 1rem;
-            color: #94a3b8;
-            border-top: 1px solid #38bdf8;
-        }
-
-        /* إضافات بسيطة */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            .hero p { font-size: 1.1rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProSys | Professional Business Systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+body{ margin:0; font-family:'Cairo',sans-serif; background:#0f172a; color:white; line-height:1.8; }
+.container{ width:90%; max-width:1100px; margin:auto; }
+.hero{ text-align:center; padding:100px 0; background:linear-gradient(135deg,#0f172a,#1e293b); }
+.hero h1{ font-size:48px; color:#38bdf8; margin-bottom:10px; }
+.hero h2{ font-size:20px; font-weight:400; color:#cbd5e1; }
+.hero p{ font-size:20px; margin:25px 0; }
+.btn{ display:inline-block; padding:15px 30px; margin:10px; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+.btn-primary{ background:#38bdf8; color:black; }
+.btn-primary:hover{ background:#0ea5e9; }
+.btn-secondary{ background:#22c55e; color:white; }
+.btn-secondary:hover{ background:#16a34a; }
+.section{ padding:80px 0; text-align:center; }
+.features{ display:flex; flex-wrap:wrap; justify-content:center; }
+.feature{ width:280px; margin:15px; padding:25px; background:#1e293b; border-radius:12px; }
+.programs{ display:flex; flex-wrap:wrap; justify-content:center; }
+.program{ width:250px; margin:15px; padding:20px; background:#1e293b; border-radius:12px; }
+.program a{ color:#38bdf8; font-weight:bold; text-decoration:none; }
+.program a:hover{ text-decoration:underline; }
+iframe{ width:100%; max-width:700px; height:400px; border-radius:12px; }
+.faq{ text-align:right; max-width:800px; margin:auto; }
+.faq h4{ color:#38bdf8; }
+.footer{ background:#020617; padding:30px; text-align:center; font-size:14px; color:#94a3b8; }
+.contact a{ color:#38bdf8; text-decoration:none; font-weight:bold; }
+.contact a:hover{ text-decoration:underline; }
+</style>
 </head>
 <body>
 
-<!-- ===== قسم البطل (HERO) مع الحفاظ على نفس النصوص ===== -->
 <div class="hero">
-    <div class="container">
-        <h1>ProSys</h1>
-        <h2>Professional Business Systems<br><span>الأنظمة الاحترافية لإدارة الأعمال والضرائب</span></h2>
-        <p><i class="fas fa-check-circle" style="color:#38bdf8; margin-left:10px;"></i>حلول متكاملة لجميع برامج الأعمال: الإيصال الإلكتروني، الفاتورة الضريبية، برامج المدارس، وإدارة المحلات</p>
+<div class="container">
+<h1>ProSys</h1>
+<h2>Professional Business Systems<br>الأنظمة الاحترافية لإدارة الأعمال والضرائب</h2>
+<p>حلول متكاملة لجميع برامج الأعمال: الإيصال الإلكتروني، الفاتورة الضريبية، برامج المدارس، وإدارة المحلات</p>
 
-        <a href="#download" class="btn btn-primary"><i class="fas fa-download"></i>تحميل تجربة مجانية</a>
-        <a href="https://wa.me/201XXXXXXXXX?text=اريد%20استشارة%20حول%20برنامج%20ProSys" class="btn btn-secondary"><i class="fab fa-whatsapp"></i>تواصل عبر واتساب</a>
-    </div>
+<a href="#download" class="btn btn-primary">تحميل تجربة مجانية</a>
+<a href="https://wa.me/201XXXXXXXXX?text=اريد%20استشارة%20حول%20برنامج%20ProSys" class="btn btn-secondary">تواصل عبر واتساب</a>
+</div>
 </div>
 
-<!-- ===== شرح النظام (فيديو) ===== -->
 <div class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>شاهد شرح النظام</h2>
-        </div>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-        </div>
-    </div>
+<div class="container">
+<h2>شاهد شرح النظام</h2>
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+</div>
 </div>
 
-<!-- ===== مميزات ProSys (نفس المميزات الستة) ===== -->
 <div class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>مميزات نظام ProSys</h2>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card"><i class="fas fa-check-circle"></i><p>✔ متوافق بالكامل مع مصلحة الضرائب المصرية</p></div>
-            <div class="feature-card"><i class="fas fa-laptop"></i><p>✔ يعمل على الكمبيوتر والموبايل</p></div>
-            <div class="feature-card"><i class="fas fa-paper-plane"></i><p>✔ إرسال تلقائي للإيصالات والفواتير</p></div>
-            <div class="feature-card"><i class="fas fa-chart-line"></i><p>✔ تقارير دقيقة وفورية</p></div>
-            <div class="feature-card"><i class="fas fa-headset"></i><p>✔ دعم فني سريع ومباشر</p></div>
-            <div class="feature-card"><i class="fas fa-sync-alt"></i><p>✔ تحديثات مستمرة مع أي تعديلات قانونية</p></div>
-        </div>
-    </div>
+<div class="container">
+<h2>مميزات نظام ProSys</h2>
+<div class="features">
+<div class="feature">✔ متوافق بالكامل مع مصلحة الضرائب المصرية</div>
+<div class="feature">✔ يعمل على الكمبيوتر والموبايل</div>
+<div class="feature">✔ إرسال تلقائي للإيصالات والفواتير</div>
+<div class="feature">✔ تقارير دقيقة وفورية</div>
+<div class="feature">✔ دعم فني سريع ومباشر</div>
+<div class="feature">✔ تحديثات مستمرة مع أي تعديلات قانونية</div>
+</div>
+</div>
 </div>
 
-<!-- ===== برامجنا الأخرى (نفس الأسماء والروابط) ===== -->
 <div class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>برامجنا الأخرى</h2>
-        </div>
-        <div class="programs-grid">
-            <div class="program-card">
-                <i class="fas fa-school"></i>
-                <a href="link-to-school-software.html">برنامج المدارس</a>
-                <p>إدارة كاملة للمدارس والطلاب</p>
-            </div>
-            <div class="program-card">
-                <i class="fas fa-store"></i>
-                <a href="link-to-store-software.html">برنامج المحلات</a>
-                <p>إدارة المحلات والفواتير اليومية</p>
-            </div>
-            <div class="program-card">
-                <i class="fas fa-carrot"></i>
-                <a href="link-to-market-software.html">برنامج سوق الخضار</a>
-                <p>متابعة المبيعات والتقارير بسهولة</p>
-            </div>
-            <div class="program-card">
-                <i class="fas fa-file-invoice"></i>
-                <a href="link-to-tax-software.html">الفاتورة الضريبية</a>
-                <p>حل قانوني متوافق مع مصلحة الضرائب</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<h2>برامجنا الأخرى</h2>
+<div class="programs">
+<div class="program">
+<a href="link-to-school-software.html">برنامج المدارس</a>
+<p>إدارة كاملة للمدارس والطلاب</p>
+</div>
+<div class="program">
+<a href="link-to-store-software.html">برنامج المحلات</a>
+<p>إدارة المحلات والفواتير اليومية</p>
+</div>
+<div class="program">
+<a href="link-to-market-software.html">برنامج سوق الخضار</a>
+<p>متابعة المبيعات والتقارير بسهولة</p>
+</div>
+<div class="program">
+<a href="link-to-tax-software.html">الفاتورة الضريبية</a>
+<p>حل قانوني متوافق مع مصلحة الضرائب</p>
+</div>
+</div>
+</div>
 </div>
 
-<!-- ===== لماذا ProSys ؟ ===== -->
 <div class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>لماذا ProSys ؟</h2>
-        </div>
-        <div class="why-box">
-            <p>لأننا لا نقدم برامج فقط، بل نقدم حلول قانونية آمنة ومستقرة لجميع منشأتك، مع دعم فني مباشر وسهولة استخدام عالية.</p>
-        </div>
-    </div>
+<div class="container">
+<h2>لماذا ProSys ؟</h2>
+<p>لأننا لا نقدم برامج فقط، بل نقدم حلول قانونية آمنة ومستقرة لجميع منشأتك، مع دعم فني مباشر وسهولة استخدام عالية.</p>
+</div>
 </div>
 
-<!-- ===== الأسئلة الشائعة ===== -->
-<div class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>الأسئلة الشائعة</h2>
-        </div>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <h4><i class="fas fa-question-circle"></i> هل النظام معتمد رسميًا؟</h4>
-                <p>جميع برامجنا متوافقة مع متطلبات الجهات الرسمية ويتم تحديثها باستمرار.</p>
-            </div>
-            <div class="faq-item">
-                <h4><i class="fas fa-flask"></i> هل يمكن تجربتها قبل الشراء؟</h4>
-                <p>نعم، يمكن تحميل نسخة تجريبية مجانية لجميع البرامج.</p>
-            </div>
-            <div class="faq-item">
-                <h4><i class="fas fa-life-ring"></i> هل يشمل دعم فني؟</h4>
-                <p>يوجد دعم فني مباشر لمساعدتك في أي وقت.</p>
-            </div>
-        </div>
-    </div>
+<div class="section faq">
+<h2 style="text-align:center;">الأسئلة الشائعة</h2>
+<h4>هل النظام معتمد رسميًا؟</h4>
+<p>جميع برامجنا متوافقة مع متطلبات الجهات الرسمية ويتم تحديثها باستمرار.</p>
+<h4>هل يمكن تجربتها قبل الشراء؟</h4>
+<p>نعم، يمكن تحميل نسخة تجريبية مجانية لجميع البرامج.</p>
+<h4>هل يشمل دعم فني؟</h4>
+<p>يوجد دعم فني مباشر لمساعدتك في أي وقت.</p>
 </div>
 
-<!-- ===== ابدأ الآن (نفس الرابط) ===== -->
 <div class="section" id="download">
-    <div class="container">
-        <div class="section-title">
-            <h2>ابدأ الآن</h2>
-        </div>
-        <p style="text-align:center; font-size:1.4rem; margin-bottom:30px;">جرب أي من برامج ProSys مجانًا واكتشف سهولة إدارة أعمالك</p>
-        <div style="text-align:center;">
-            <a href="yourprogram.exe" class="btn btn-primary" style="font-size:1.4rem;"><i class="fas fa-download"></i> تحميل الآن</a>
-        </div>
-    </div>
+<div class="container">
+<h2>ابدأ الآن</h2>
+<p>جرب أي من برامج ProSys مجانًا واكتشف سهولة إدارة أعمالك</p>
+<a href="yourprogram.exe" class="btn btn-primary">تحميل الآن</a>
+</div>
 </div>
 
-<!-- ===== تواصل معنا (نفس البيانات) ===== -->
 <div class="section contact">
-    <div class="container">
-        <div class="contact-wrapper">
-            <div class="section-title">
-                <h2>تواصل معنا</h2>
-            </div>
-            <div class="contact-info">
-                <div class="contact-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/201XXXXXXXXX">201XXXXXXXXX</a></div>
-                <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+201XXXXXXXXX">201XXXXXXXXX</a></div>
-                <div class="contact-item"><i class="far fa-envelope"></i> <a href="mailto:info@prosys-eg.com">info@prosys-eg.com</a></div>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<h2>تواصل معنا</h2>
+<p>واتساب: <a href="https://wa.me/201XXXXXXXXX">201XXXXXXXXX</a></p>
+<p>تليفون: <a href="tel:+201XXXXXXXXX">201XXXXXXXXX</a></p>
+<p>البريد الإلكتروني: <a href="mailto:info@prosys-eg.com">info@prosys-eg.com</a></p>
+</div>
 </div>
 
-<!-- ===== الفوتر ===== -->
 <div class="footer">
-    © 2026 ProSys - Professional Business Systems - جميع الحقوق محفوظة
+© 2026 ProSys - Professional Business Systems - جميع الحقوق محفوظة
 </div>
 
 </body>
