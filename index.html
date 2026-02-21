@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dhbsys | دهب سيستمز - الحلول الذهبية للمحاسبة</title>
+    <title>dhbsys • دهب سيستمز | الحلول الذهبية للمحاسبة</title>
     
-    <!-- الخطوط -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- الخطوط (Cairo متعددة الأوزان) + تحسينات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- تحسينات إضافية -->
+    <!-- أيقونات (Font Awesome للمسة احترافية) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <meta name="description" content="دهب سيستمز - برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار">
     <meta name="keywords" content="برامج محاسبية, محاسبة, دهب سيستمز, برنامج مدارس, برنامج محلات, إيصال إلكتروني, dhbsys">
     
     <style>
-        /* المتغيرات الأساسية */
+        /* reset و متغيرات متطورة */
         * {
             margin: 0;
             padding: 0;
@@ -22,722 +26,670 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background: #0f172a;
-            color: #fff;
-            line-height: 1.8;
+            background: linear-gradient(145deg, #0b1120 0%, #1a2639 100%);
+            color: #e9edf5;
+            line-height: 1.7;
+            min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* خلفية ديناميكية ناعمة (دوائر ذهبية خفيفة) */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.03) 0%, transparent 30%),
+                        radial-gradient(circle at 90% 70%, rgba(255, 215, 0, 0.04) 0%, transparent 35%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* تأثيرات حركية */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #38bdf8; }
-            50% { text-shadow: 0 0 20px #38bdf8, 0 0 30px #FFD700; }
-            100% { text-shadow: 0 0 5px #38bdf8; }
-        }
-
-        /* الهيدر والهيرو */
-        .hero {
-            background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
-            padding: 120px 0;
-            text-align: center;
+            padding: 0 25px;
             position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid #38bdf8;
+            z-index: 2;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .hero h1 {
-            font-size: 70px;
-            font-weight: 900;
-            color: #38bdf8;
-            margin-bottom: 10px;
-            animation: fadeInUp 1s ease, glow 3s infinite;
-            position: relative;
-        }
-
-        .hero .gold {
-            color: #FFD700;
-        }
-
-        .hero h2 {
-            font-size: 24px;
-            font-weight: 400;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        /* الأزرار */
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            margin: 0 10px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: #38bdf8;
-            color: #0f172a;
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: #0ea5e9;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #FFD700;
-            border: 2px solid #FFD700;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: #FFD700;
-            color: #0f172a;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-        }
-
-        /* الأقسام العامة */
-        .section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 48px;
-            color: #38bdf8;
-            text-align: center;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            margin: 20px auto 0;
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 18px;
-            margin-bottom: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* شبكة البرامج */
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .program-card {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border-radius: 20px;
-            padding: 30px;
-            transition: all 0.4s;
-            border: 1px solid #334155;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.3);
-        }
-
-        .program-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .program-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .program-card a {
-            color: #38bdf8;
-            font-size: 24px;
-            font-weight: 700;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-            transition: color 0.3s;
-        }
-
-        .program-card a:hover {
-            color: #FFD700;
-        }
-
-        .program-card p {
-            color: #cbd5e1;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* قسم الفيديو */
-        .video-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 30px;
-            padding: 60px 40px;
-            margin: 40px 0;
-            border: 1px solid #334155;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .youtube-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #FFD700;
-            font-size: 20px;
-            text-decoration: none;
-            padding: 10px 30px;
-            border: 2px solid #FFD700;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-
-        .youtube-link:hover {
-            background: #FFD700;
-            color: #0f172a;
-            transform: scale(1.05);
-        }
-
-        /* الأسئلة الشائعة */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .faq-item {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            transition: all 0.3s;
-        }
-
-        .faq-item:hover {
-            border-color: #38bdf8;
-            transform: translateX(-5px);
-        }
-
-        .faq-item h4 {
-            color: #38bdf8;
-            font-size: 20px;
-            margin-bottom: 15px;
+        /* ===== التصميم الاحترافي الجديد ===== */
+        .navbar {
+            padding: 24px 0 16px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(2px);
         }
 
-        .faq-item p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .faq-link {
-            color: #FFD700;
-            text-decoration: none;
+        .logo-icon {
+            background: linear-gradient(135deg, #fbbf24 0%, #b8860b 100%);
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 25px -8px rgba(255, 215, 0, 0.3);
+        }
+
+        .logo-icon i {
+            font-size: 32px;
+            color: #0f172a;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .logo-text h1 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            background: linear-gradient(to left, #fff6d5, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .logo-text .sub {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #aab9d4;
+            margin-top: -6px;
+            display: block;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
             font-weight: 600;
+        }
+
+        .nav-links a {
+            color: #cfddee;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 6px;
+        }
+
+        .nav-links a:hover {
+            color: #fbbf24;
+            border-bottom-color: #fbbf24;
+        }
+
+        /* hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            padding: 60px 0 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1 1 450px;
+        }
+
+        .hero-badge {
+            background: rgba(255,215,0,0.12);
+            border: 1px solid rgba(255,215,0,0.3);
+            border-radius: 60px;
+            padding: 8px 22px;
+            display: inline-block;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #f5d371;
+            backdrop-filter: blur(5px);
+            font-size: 0.95rem;
+        }
+
+        .hero-content h2 {
+            font-size: 3.3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-highlight {
+            background: linear-gradient(145deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #b8c7e0;
+            margin-bottom: 35px;
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin: 40px 0 25px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #95a9c7;
+        }
+
+        .hero-image {
+            flex: 1 1 300px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 40px;
+            padding: 30px 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,215,0,0.15);
+            box-shadow: 0 35px 60px -15px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        .hero-image i {
+            font-size: 180px;
+            color: rgba(255,215,0,0.3);
+            filter: drop-shadow(0 0 15px #ffd70040);
+        }
+
+        .hero-image .image-caption {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #fbbf24;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 20px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+
+        /* بطاقات الخدمات بشكل أنيق */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 30px;
+            position: relative;
+        }
+
+        .section-title h3 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(to left, #fff, #f3d779);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+
+        .section-title .title-bg {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5rem;
+            font-weight: 900;
+            color: rgba(255,215,0,0.03);
+            z-index: -1;
+            white-space: nowrap;
+            letter-spacing: 12px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin: 40px 0 20px;
+        }
+
+        .service-card {
+            background: rgba(20, 30, 45, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,215,0,0.12);
+            border-radius: 36px;
+            padding: 32px 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 25px 35px -12px rgba(0,0,0,0.5);
+            text-align: right;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle at top right, rgba(255,215,0,0.15), transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #fbbf24;
+            box-shadow: 0 35px 45px -10px #fbbf2430;
+        }
+
+        .card-icon {
+            background: linear-gradient(145deg, #26344b, #1a2538);
+            width: 70px;
+            height: 70px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,215,0,0.3);
+            box-shadow: 0 12px 20px -10px black;
+        }
+
+        .card-icon i {
+            font-size: 38px;
+            color: #fbbf24;
+        }
+
+        .service-card h4 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #fff3cf;
+        }
+
+        .service-card p {
+            color: #bfd0e7;
+            margin-bottom: 25px;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .card-link {
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
+            color: #fbbf24;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 1px dashed #fbbf24;
+            padding-bottom: 3px;
+            transition: 0.2s;
         }
 
-        .faq-link:hover {
-            text-decoration: underline;
+        .card-link i {
+            font-size: 0.9rem;
+            transition: 0.2s;
         }
 
-        /* قسم الاتصال */
-        .contact-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 30px;
-            padding: 60px 40px;
-            text-align: center;
-            border: 1px solid #334155;
+        .card-link:hover i {
+            transform: translateX(-4px);
         }
 
-        .contact-info {
+        /* شريط الإحصائيات الذهبية */
+        .stats-bar {
+            background: rgba(0,0,0,0.35);
+            backdrop-filter: blur(16px);
+            border-radius: 110px;
+            padding: 30px 35px;
+            margin: 80px 0 40px;
+            border: 1px solid rgba(255,215,0,0.2);
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
+            align-items: center;
+            justify-content: space-around;
+            gap: 15px;
         }
 
-        .contact-item {
+        .stat-block {
             text-align: center;
         }
 
-        .contact-item .icon {
-            font-size: 32px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .contact-item a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: #FFD700;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: #1e293b;
-            color: #38bdf8;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 20px;
-            transition: all 0.3s;
-            border: 1px solid #334155;
-        }
-
-        .social-link:hover {
-            background: #38bdf8;
-            color: #0f172a;
-            transform: translateY(-3px);
-            border-color: #FFD700;
-        }
-
-        /* الفوتر */
-        .footer {
-            background: #020617;
-            padding: 60px 0 30px;
-            margin-top: 80px;
-            border-top: 1px solid #334155;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-size: 32px;
+        .stat-block .digit {
+            font-size: 2.7rem;
             font-weight: 900;
-            color: #38bdf8;
-            margin-bottom: 15px;
+            color: #f3cd6b;
         }
 
-        .footer-logo .gold {
-            color: #FFD700;
+        .stat-block .desc {
+            font-size: 1rem;
+            color: #cbd5e6;
+            letter-spacing: 0.3px;
         }
 
-        .footer-description {
-            color: #94a3b8;
+        /* قسم التميز */
+        .feature-grid {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 50px 0;
+        }
+
+        .feature-item {
+            flex: 1 1 200px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 30px;
+            padding: 30px 20px;
+            border: 1px solid rgba(255,215,0,0.1);
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 48px;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h5 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* footer احترافي */
+        .footer {
+            margin-top: 110px;
+            padding: 50px 0 30px;
+            border-top: 1px solid rgba(255,215,0,0.15);
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-col p {
+            color: #9dafcc;
+            max-width: 270px;
+            margin-top: 15px;
+        }
+
+        .footer-col h6 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fad774;
             margin-bottom: 20px;
         }
 
         .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
         }
 
         .footer-links a {
-            color: #94a3b8;
+            color: #c1d1e8;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: 0.2s;
         }
 
         .footer-links a:hover {
-            color: #38bdf8;
+            color: #fbbf24;
+            margin-right: 5px;
         }
 
-        .footer-bottom {
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .social-icons a {
+            background: #253040;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fbbf24;
+            font-size: 1.6rem;
+            transition: 0.2s;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .social-icons a:hover {
+            background: #fbbf24;
+            color: #0f172a;
+            transform: scale(1.1);
+        }
+
+        .copyright {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            padding: 30px 0 15px;
+            color: #7f8fb2;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255,215,0,0.06);
+            margin-top: 30px;
         }
 
-        .footer-bottom a {
-            color: #FFD700;
-            text-decoration: none;
+        /* الزر العام */
+        .btn-gold {
+            background: linear-gradient(135deg, #fbbf24 0%, #d4a017 100%);
+            border: none;
+            padding: 14px 38px;
+            border-radius: 60px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #0b1729;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 12px 25px -8px #fbbf24;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ffe084;
         }
 
-        .footer-bottom a:hover {
-            text-decoration: underline;
+        .btn-gold i {
+            font-size: 1.2rem;
         }
 
-        /* تأثيرات متفرقة */
-        .glow-text {
-            animation: glow 3s infinite;
-        }
-
-        .gold-text {
-            color: #FFD700;
-        }
-
-        .divider {
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            margin: 30px auto;
-            border-radius: 2px;
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #f3cd6b 0%, #e5a817 100%);
+            box-shadow: 0 22px 30px -8px #fbbf24;
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
-
-    <!-- قسم الهيرو الرئيسي -->
-    <section class="hero">
-        <div class="container">
-            <h1>dhb<span class="gold">sys</span></h1>
-            <h2>دهب سيستمز <span class="gold">✨</span><br>الأنظمة الذهبية لإدارة الأعمال والضرائب</h2>
-            <p>حلول متكاملة لجميع برامج الأعمال: الإيصال الإلكتروني، الفاتورة الضريبية، برامج المدارس، وإدارة المحلات والشركات</p>
-            <div>
-                <a href="#programs" class="btn btn-primary">تصفح البرامج</a>
-                <a href="#contact" class="btn btn-secondary">اتصل بنا</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم البرامج -->
-    <section class="section" id="programs">
-        <div class="container">
-            <h2 class="section-title">برامجنا الذهبية</h2>
-            <p class="section-subtitle">اختر البرنامج المناسب لعملك من بين مجموعتنا المتميزة من الحلول المحاسبية المتكاملة</p>
-            
-            <div class="programs-grid">
-                
-                <!-- برنامج المدارس -->
-                <div class="program-card">
-                    <div class="program-icon">🏫</div>
-                    <a href="https://abohany2024-001-site1.jtempurl.com" target="_blank">برنامج المدارس</a>
-                    <p>إدارة كاملة للمدارس والطلاب - حضور، غياب، درجات، جداول، تواصل مع أولياء الأمور، وشؤون الطلاب المتكاملة</p>
+    <div class="container">
+        <!-- هدر أنيق بشعار ذهبي -->
+        <div class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gem"></i> <!-- رمز الألماسة/الذهب -->
                 </div>
-
-                <!-- برنامج المحلات والشركات -->
-                <div class="program-card">
-                    <div class="program-icon">🏢</div>
-                    <a href="https://abohany2024-001-site4.jtempurl.com" target="_blank">برنامج المحلات والشركات</a>
-                    <p>إدارة متكاملة للمحلات والشركات: فواتير، مخزون، عملاء، موردين، تقارير مالية، ونقاط بيع متطورة</p>
-                </div>
-
-                <!-- برنامج سوق الخضار -->
-                <div class="program-card">
-                    <div class="program-icon">🥦</div>
-                    <a href="https://abohany2024-001-site3.jtempurl.com" target="_blank">برنامج سوق الخضار للكويت</a>
-                    <p>متابعة المبيعات والتقارير بسهولة - مخصص لتجار الخضار والفواكه مع دعم الميزان والصناديق</p>
-                </div>
-
-                <!-- برنامج الإيصال الإلكتروني -->
-                <div class="program-card">
-                    <div class="program-icon">🧾</div>
-                    <a href="https://abohany2024-001-site2.jtempurl.com" target="_blank">الإيصال الإلكتروني</a>
-                    <p>حل قانوني متوافق مع مصلحة الضرائب المصرية - طباعة إيصالات ضريبية معتمدة QR كود</p>
-                </div>
-
-                <!-- برنامج إضافي 1 -->
-                <div class="program-card">
-                    <div class="program-icon">📊</div>
-                    <a href="https://abohany2024-001-site1.jtempurl.com" target="_blank">برنامج الحسابات العامة</a>
-                    <p>دفاتر أستاذ، ميزان مراجعة، قيود يومية، تقارير مالية متكاملة لجميع الأنشطة التجارية</p>
-                </div>
-
-                <!-- برنامج إضافي 2 -->
-                <div class="program-card">
-                    <div class="program-icon">👥</div>
-                    <a href="https://abohany2024-001-site4.jtempurl.com" target="_blank">برنامج الموارد البشرية</a>
-                    <p>إدارة شؤون الموظفين، الرواتب، الإجازات، الحضور والانصراف، والتقييمات الدورية</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم شرح الفيديو -->
-    <section class="section">
-        <div class="container">
-            <div class="video-section">
-                <h2 class="section-title">شاهد شرح البرامج</h2>
-                <p class="section-subtitle">تعرف على مميزات برامجنا من خلال الفيديوهات التوضيحية</p>
-                
-                <div class="video-wrapper">
-                    <iframe src="www.youtube.com/@دهبسيستمز"شرح برامج دهب سيستمز" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <div style="text-align: center;">
-                    <a href="https://www.youtube.com/channel/UCKntP_9MPvIL5lbwBNQ584g"youtube-link">
-                        🔔 اشترك في قناتنا على يوتيوب
-                    </a>
+                <div class="logo-text">
+                    <h1>dhbsys</h1>
+                    <span class="sub">دهب سيستمز • الحلول الذهبية</span>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- الأسئلة الشائعة -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">الأسئلة الشائعة</h2>
-            <p class="section-subtitle">إجابات على أكثر الأسئلة التي تهم عملائنا</p>
-            
-            <div class="faq-grid">
-                
-                <div class="faq-item">
-                    <h4>❓ هل البرامج متوافقة مع مصلحة الضرائب المصرية؟</h4>
-                    <p>نعم، جميع برامجنا معتمدة ومتوافقة مع متطلبات مصلحة الضرائب المصرية .</p>
-                    <a href="https://example.com/zatca-compliance" target="_blank" class="faq-link">شاهد شهادة الاعتماد ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل توفرون تدريب على البرامج؟</h4>
-                    <p>نعم، نوفر تدريب عن بعد وحضوري حسب رغبتك مع مدربين متخصصين.</p>
-                    <a href="https://example.com/training" target="_blank" class="faq-link">سجل في دورة تدريبية ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل يمكن تجربة البرنامج قبل الشراء؟</h4>
-                    <p>نعم، نوفر نسخة تجريبية مجانية لمدة 14 يوماً لكافة برامجنا.</p>
-                    <a href="https://example.com/free-trial" target="_blank" class="faq-link">جرّب النسخة المجانية الآن ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ كيف يتم الدعم الفني؟</h4>
-                    <p>عبر الواتساب، البريد الإلكتروني، والهاتف طوال أيام العمل من 9 صباحاً إلى 9 مساءً.</p>
-                    <a href="#contact" class="faq-link">انتقل لمعلومات الاتصال ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل تدعمون التحديثات؟</h4>
-                    <p>نعم، نوفر تحديثات دورية مجانية للبرامج مع إضافة مميزات جديدة.</p>
-                    <a href="https://example.com/updates" target="_blank" class="faq-link">تعرف على آخر التحديثات ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل يوجد نسخة سحابية؟</h4>
-                    <p>نعم، جميع برامجنا متوفرة بنسختين: محلية On-Premise وسحابية Cloud.</p>
-                    <a href="https://example.com/cloud" target="_blank" class="faq-link">اكتشف المميزات السحابية ←</a>
-                </div>
-
+            <div class="nav-links">
+                <a href="#">الرئيسية</a>
+                <a href="#">حلولنا</a>
+                <a href="#">المميزات</a>
+                <a href="#">اتصل بنا</a>
             </div>
         </div>
-    </section>
 
-    <!-- قسم الاتصال -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-section">
-                <h2 class="section-title">تواصل معنا</h2>
-                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك ومساعدتك في اختيار البرنامج المناسب</p>
+        <!-- Hero Section محسنة -->
+        <div class="hero">
+            <div class="hero-content">
+                <span class="hero-badge"><i class="fas fa-crown" style="margin-left: 8px;"></i> الذهبيــة للمحاسبة</span>
+                <h2>
+                    <span class="hero-highlight">نُظم ذهبية</span><br>
+                    تُدير أعمالك ببراعة
+                </h2>
+                <p>برامج محاسبية متكاملــة: المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار. انضم لأكثر من ١٢٠٠ عميل.</p>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <span style="display:block; color:#94a3b8;">دمياط الجديده،جمهورية مصر العربية</span>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">+15</span>
+                        <span class="stat-label">عاماً من التميز</span>
                     </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">📞</span>
-                        <a href="tel:+201501804675">+201501804675</a>
+                    <div class="stat-item">
+                        <span class="stat-number">1,280</span>
+                        <span class="stat-label">عميل نشط</span>
                     </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">📧</span>
-                        <a href="mailto:info@dhbsys.com">info@dhbsys.com</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">💬</span>
-                        <a href="https://wa.me/01501804675" target="_blank">واتساب</a>
+                    <div class="stat-item">
+                        <span class="stat-number">50k</span>
+                        <span class="stat-label">فـاتورة/يوم</span>
                     </div>
                 </div>
+                <button class="btn-gold"><i class="fas fa-phone-alt"></i> احصل على استشارة</button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-chart-pie"></i>
+                <div class="image-caption">تحليلات لحظية • تقارير ذكية</div>
+            </div>
+        </div>
 
-                <div class="social-links">
-                    <a href="https://twitter.com/dhbsys" target="_blank" class="social-link">🐦</a>
-                    <a href="https://linkedin.com/company/dhbsys" target="_blank" class="social-link">🔗</a>
-                    <a href="https://facebook.com/dhbsys" target="_blank" class="social-link">📘</a>
-                    <a href="https://instagram.com/dhbsys" target="_blank" class="social-link">📷</a>
-                    <a href="https://t.me/dhbsys" target="_blank" class="social-link">📱</a>
-                    <a href="https://youtube.com/@dhbsys" target="_blank" class="social-link">▶️</a>
+        <!-- بطاقات الحلول الأربعة (أكثر احترافية) -->
+        <div class="section-title">
+            <span class="title-bg">SOLUTIONS</span>
+            <h3>حلولنــا المتخصصــة</h3>
+        </div>
+
+        <div class="cards-grid">
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-school"></i></div>
+                <h4>برنامج المدارس</h4>
+                <p>إدارة حسابات الطلاب، تحصيل الرسوم، وشؤون الموظفين بكفاءة عالية.</p>
+                <a href="#" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-store"></i></div>
+                <h4>برنامج المحلات</h4>
+                <p>نقاط بيع، مخزون، عملاء، وخصومات. يناسب السوبرماركت والمتاجر.</p>
+                <a href="#" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-receipt"></i></div>
+                <h4>الإيصال الإلكتروني</h4>
+                <p>متوافق مع هيئة الزكاة والضريبة، إصدار فواتير إلكترونية معتمدة.</p>
+                <a href="#" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-carrot"></i></div>
+                <h4>سوق الخضار</h4>
+                <p>منصات مخصصة لتجار الجملة والخضار: وزن، باركود، وتسعير مرن.</p>
+                <a href="#" class="card-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <!-- شريط ثقة بالأرقام -->
+        <div class="stats-bar">
+            <div class="stat-block"><span class="digit">98%</span> <span class="desc">رضا العملاء</span></div>
+            <div class="stat-block"><span class="digit">24/7</span> <span class="desc">دعم فني</span></div>
+            <div class="stat-block"><span class="digit">15</span> <span class="desc">خبير تقني</span></div>
+            <div class="stat-block"><span class="digit">+40</span> <span class="desc">تحديثات سنوية</span></div>
+        </div>
+
+        <!-- ميزات تنافسية (إضافية) -->
+        <div style="display: flex; align-items: center; gap: 30px; flex-wrap: wrap; margin: 50px 0;">
+            <div style="flex: 1; min-width: 260px;">
+                <h3 style="font-size: 2.2rem; font-weight: 800; line-height: 1.3;">لماذا <span style="color: #fbbf24;">دهب سيستمز</span> الخيار الذهبي؟</h3>
+                <p style="color: #b2c3dd; margin-top: 18px;">منظومة محاسبية متطورة بمعايير عالمية، تدعم العربية كاملاً، ومتوافقة مع متطلبات الهيئات المحلية.</p>
+            </div>
+            <div class="feature-grid" style="flex: 2;">
+                <div class="feature-item">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h5>نسخ احتياطي</h5>
+                    <p style="color: #a4b7d5;">تلقائي وسحابي</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h5>أمان عالي</h5>
+                    <p style="color: #a4b7d5;">تشفيـر بيانـات</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h5>تقارير ذكية</h5>
+                    <p style="color: #a4b7d5;">تحليلات لحظية</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div> <!-- نهاية container -->
 
-    <!-- الفوتر -->
-    <footer class="footer">
+    <!-- فوتر منفصل (خارج container ليشمل الخلفية كاملة) -->
+    <div style="background: rgba(0,0,0,0.3); backdrop-filter: blur(5px); margin-top: 80px; padding: 20px 0 0;">
         <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">dhb<span class="gold">sys</span></div>
-                    <p class="footer-description">
-                        دهب سيستمز - الحلول الذهبية لأنظمة المحاسبة وإدارة الأعمال. 
-                        نقدم برامج متكاملة تلبي احتياجات جميع القطاعات.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">روابط سريعة</h3>
-                    <div class="footer-links">
-                        <a href="#programs">البرامج</a>
-                        <a href="#contact">اتصل بنا</a>
-                        <a href="https://example.com/about">من نحن</a>
-                        <a href="https://example.com/blog">المدونة</a>
+            <div class="footer">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-gem" style="font-size: 36px; color: #fbbf24;"></i>
+                        <h2 style="color: white;">dhbsys</h2>
+                    </div>
+                    <p>الريادة في تقديم الحلول المحاسبية الذهبية التي تجمع بين الأصالة والتكنولوجيا.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">الدعم</h3>
-                    <div class="footer-links">
-                        <a href="https://example.com/help">مركز المساعدة</a>
-                        <a href="https://example.com/faq">الأسئلة الشائعة</a>
-                        <a href="https://example.com/training">التدريب</a>
-                        <a href="https://example.com/support">الدعم الفني</a>
-                    </div>
+                <div class="footer-col">
+                    <h6>الروابط</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">عن الشركة</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">وظائف</a></li>
+                    </ul>
                 </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">القانوني</h3>
-                    <div class="footer-links">
-                        <a href="https://example.com/privacy">سياسة الخصوصية</a>
-                        <a href="https://example.com/terms">شروط الاستخدام</a>
-                        <a href="https://example.com/cookies">سياسة الكوكيز</a>
+                <div class="footer-col">
+                    <h6>الدعم</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">مركز المساعدة</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">الخصوصية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>تحميل التطبيق</h6>
+                    <p>توفر إصدارات سطح المكتب والجوال.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 20px;">
+                        <i class="fab fa-apple" style="font-size: 38px; color: #fbbf24;"></i>
+                        <i class="fab fa-google-play" style="font-size: 38px; color: #fbbf24;"></i>
                     </div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 <a href="https://www.youtube.com/@hanymohamed2943</a> - جميع الحقوق محفوظة لـ دهب سيستمز</p>
-                <p style="margin-top:10px; font-size:14px;">الحلول الذهبية لأنظمة الأعمال ✨</p>
+            <div class="copyright">
+                © 2025 دهب سيستمز (dhbsys). جميع الحقوق محفوظة. تصميم يعكس الذهب والاحترافية.
             </div>
         </div>
-    </footer>
-
+    </div>
 </body>
-                                                                                                                    </html>
-
-
-
-
-
+                            </html>
