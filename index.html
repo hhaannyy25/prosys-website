@@ -576,27 +576,80 @@
         </div>
     </section>
 
-    <!-- قسم شرح الفيديو -->
-    <section class="section">
-        <div class="container">
-            <div class="video-section">
-                <h2 class="section-title">شاهد شرح البرامج</h2>
-                <p class="section-subtitle">تعرف على مميزات برامجنا من خلال الفيديوهات التوضيحية</p>
+   <!-- قسم شرح الفيديو -->
+<section class="section">
+    <div class="container">
+        <div class="video-section">
+            <h2 class="section-title">شاهد شرح البرامج</h2>
+            <p class="section-subtitle">تعرف على مميزات برامجنا من خلال الفيديوهات التوضيحية</p>
+            
+            <div class="video-wrapper">
+                <!-- الفيديو الأول - تم تعديل الرابط إلى رابط embed -->
+                <iframe src="https://www.youtube.com/embed/V0JuKpxm74k" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
                 
-                <div class="video-wrapper">
-                    <iframe src="https://youtu.be/V0JuKpxm74k" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe src=" https://youtu.be/wgpPfhUNM28" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>             
-                </div>
-                
-                <div style="text-align: center;">
-                    <a href="https://www.youtube.com/channel/UCgD1JQPca_DMdNK63PAm5tg" target="_blank" class="youtube-link">
-                        🔔 اشترك في قناتنا على يوتيوب
-                    </a>
-                </div>
+                <!-- الفيديو الثاني - تم تعديل الرابط إلى رابط embed -->
+                <iframe src="https://www.youtube.com/embed/wgpPfhUNM28" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>             
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://www.youtube.com/channel/UCgD1JQPca_DMdNK63PAm5tg" target="_blank" class="youtube-link">
+                    🔔 اشترك في قناتنا على يوتيوب
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<style>
+/* إضافة CSS لعرض الفيديوهات بجانب بعضها */
+.video-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* تقسيم العرض إلى عمودين متساويين */
+    gap: 20px; /* مسافة بين الفيديوهات */
+    margin-bottom: 30px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 315px; /* ارتفاع مناسب للفيديو */
+    border: none;
+    border-radius: 8px; /* زوايا دائرية خفيفة */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* ظل خفيف */
+}
+
+/* للشاشات الصغيرة (الموبايل) */
+@media (max-width: 768px) {
+    .video-wrapper {
+        grid-template-columns: 1fr; /* فيديو واحد تحت الآخر */
+    }
+    
+    .video-wrapper iframe {
+        height: 250px; /* ارتفاع أقل للشاشات الصغيرة */
+    }
+}
+
+/* تنسيق زر اليوتيوب */
+.youtube-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FF0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.youtube-link:hover {
+    background-color: #CC0000;
+}
+</style>
     <!-- الأسئلة الشائعة -->
     <section class="section">
         <div class="container">
@@ -737,6 +790,7 @@
 
 </body>
 </html>
+
 
 
 
