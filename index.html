@@ -1,799 +1,235 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dhbsys | دهب سيستمز - الحلول الذهبية للمحاسبة</title>
-    
-    <!-- الخطوط -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    
-    <!-- تحسينات إضافية -->
-    <meta name="description" content="دهب سيستمز - برامج محاسبية متكاملة: برامج المدارس، الشركات، الإيصال الإلكتروني، وسوق الخضار">
-    <meta name="keywords" content="برامج محاسبية, محاسبة, دهب سيستمز, برنامج مدارس, برنامج الشركات, إيصال إلكتروني, dhbsys">
-    
-    <style>
-        /* المتغيرات الأساسية */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dhbsys | الحلول الذهبية للمحاسبة</title>
+<meta name="description" content="دهب سيستمز - أنظمة محاسبية وإدارية متكاملة للشركات والمدارس والمخازن عبر الإنترنت">
+<meta name="keywords" content="برامج محاسبة, برنامج مدارس, برنامج شركات, برنامج مخازن, dhbsys">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ---------------------- RESET ---------------------- */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Cairo',sans-serif;background:#0f172a;color:#fff;line-height:1.8;}
+a{text-decoration:none;color:inherit;}
+
+/* ---------------------- CONTAINER ---------------------- */
+.container{width:90%;max-width:1200px;margin:auto;}
+
+/* ---------------------- HEADER ---------------------- */
+header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;z-index:100;}
+.nav{display:flex;justify-content:space-between;align-items:center;height:70px;}
+.logo{font-size:26px;font-weight:900;color:#38bdf8;}
+.menu a{margin:0 15px;color:#cbd5e1;font-weight:500;transition:0.3s;}
+.menu a:hover{color:#38bdf8;}
+.auth{display:flex;gap:10px;}
+.login{border:1px solid #38bdf8;padding:8px 16px;border-radius:6px;color:#38bdf8;transition:0.3s;}
+.login:hover{background:#38bdf8;color:#000;}
+.register{background:#38bdf8;padding:8px 16px;border-radius:6px;color:#000;font-weight:bold;transition:0.3s;}
+.register:hover{opacity:0.85;}
+
+/* ---------------------- HERO ---------------------- */
+.hero{padding:120px 0;text-align:center;background:linear-gradient(180deg,#020617,#0f172a);}
+.hero h1{font-size:48px;margin-bottom:20px;line-height:1.2;}
+.hero p{color:#cbd5e1;margin-bottom:30px;font-size:20px;}
+.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;}
+.start{background:#38bdf8;padding:14px 30px;border-radius:8px;color:#000;font-weight:bold;transition:0.3s;}
+.start:hover{opacity:0.85;}
+.systems-btn{border:1px solid #38bdf8;padding:14px 30px;border-radius:8px;color:#38bdf8;font-weight:bold;transition:0.3s;}
+.systems-btn:hover{background:#38bdf8;color:#000;}
+
+/* ---------------------- SYSTEMS ---------------------- */
+.systems-section{padding:80px 0;}
+.systems-section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:#020617;padding:25px;border-radius:12px;border:1px solid #1e293b;transition:0.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(56,189,248,0.3);}
+.card h3{margin-bottom:12px;font-size:22px;color:#38bdf8;}
+.card p{color:#94a3b8;margin-bottom:15px;font-size:16px;}
+.card a{color:#38bdf8;font-weight:bold;}
+
+/* ---------------------- FEATURES ---------------------- */
+.features{padding:80px 0;background:#020617;}
+.features h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.feature{background:#0f172a;padding:25px;border-radius:12px;border:1px solid #1e293b;transition:0.3s;}
+.feature:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(56,189,248,0.3);}
+.feature h3{margin-bottom:12px;font-size:20px;color:#38bdf8;}
+.feature p{color:#94a3b8;font-size:16px;}
+
+/* ---------------------- VIDEO ---------------------- */
+.video-section{padding:80px 0;text-align:center;}
+.video-section h2{color:#38bdf8;font-size:36px;margin-bottom:30px;}
+.video-section iframe{width:80%;max-width:800px;height:450px;border-radius:12px;}
+
+/* ---------------------- PRICING ---------------------- */
+.pricing{padding:80px 0;background:#020617;}
+.pricing h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.plan{background:#0f172a;padding:25px;border-radius:12px;border:1px solid #1e293b;text-align:center;transition:0.3s;}
+.plan:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(56,189,248,0.3);}
+.plan h3{font-size:24px;margin-bottom:10px;color:#38bdf8;}
+.plan p{font-size:32px;margin-bottom:15px;color:#fff;}
+.plan ul{list-style:none;margin-bottom:15px;}
+.plan ul li{margin:10px 0;color:#94a3b8;}
+.plan a{display:inline-block;background:#38bdf8;color:#000;padding:10px 25px;border-radius:8px;font-weight:bold;transition:0.3s;}
+.plan a:hover{opacity:0.85;}
+
+/* ---------------------- CTA ---------------------- */
+.cta{text-align:center;padding:80px 0;}
+.cta a{background:#38bdf8;padding:14px 30px;border-radius:8px;color:#000;font-weight:bold;transition:0.3s;}
+.cta a:hover{opacity:0.85;}
+
+/* ---------------------- FOOTER ---------------------- */
+footer{background:#020617;text-align:center;padding:30px 0;margin-top:50px;color:#94a3b8;}
+
+</style>
 
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: #0f172a;
-            color: #fff;
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* تأثيرات حركية */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #38bdf8; }
-            50% { text-shadow: 0 0 20px #38bdf8, 0 0 30px #FFD700; }
-            100% { text-shadow: 0 0 5px #38bdf8; }
-        }
-
-        /* الهيدر والهيرو */
-        .hero {
-            background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
-            padding: 120px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid #38bdf8;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .hero h1 {
-            font-size: 70px;
-            font-weight: 900;
-            color: #38bdf8;
-            margin-bottom: 10px;
-            animation: fadeInUp 1s ease, glow 3s infinite;
-            position: relative;
-        }
-
-        .hero .gold {
-            color: #FFD700;
-        }
-
-        .hero h2 {
-            font-size: 24px;
-            font-weight: 400;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        /* الأزرار */
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            margin: 0 10px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 18px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .btn:hover::before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: #38bdf8;
-            color: #0f172a;
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: #0ea5e9;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #FFD700;
-            border: 2px solid #FFD700;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
-        }
-
-        .btn-secondary:hover {
-            background: #FFD700;
-            color: #0f172a;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-        }
-
-        /* الأقسام العامة */
-        .section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 48px;
-            color: #38bdf8;
-            text-align: center;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-            width: 100%;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            margin: 20px auto 0;
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #94a3b8;
-            font-size: 18px;
-            margin-bottom: 50px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* شبكة البرامج */
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .program-card {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-            border-radius: 20px;
-            padding: 30px;
-            transition: all 0.4s;
-            border: 1px solid #334155;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .program-card:hover {
-            transform: translateY(-10px);
-            border-color: #38bdf8;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(56, 189, 248, 0.3);
-        }
-
-        .program-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .program-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .program-card a {
-            color: #38bdf8;
-            font-size: 24px;
-            font-weight: 700;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 15px;
-            transition: color 0.3s;
-        }
-
-        .program-card a:hover {
-            color: #FFD700;
-        }
-
-        .program-card p {
-            color: #cbd5e1;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        /* قسم الفيديو */
-        .video-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 30px;
-            padding: 60px 40px;
-            margin: 40px 0;
-            border: 1px solid #334155;
-        }
-
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .youtube-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #FFD700;
-            font-size: 20px;
-            text-decoration: none;
-            padding: 10px 30px;
-            border: 2px solid #FFD700;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-
-        .youtube-link:hover {
-            background: #FFD700;
-            color: #0f172a;
-            transform: scale(1.05);
-        }
-
-        /* الأسئلة الشائعة */
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .faq-item {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #334155;
-            transition: all 0.3s;
-        }
-
-        .faq-item:hover {
-            border-color: #38bdf8;
-            transform: translateX(-5px);
-        }
-
-        .faq-item h4 {
-            color: #38bdf8;
-            font-size: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .faq-item p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .faq-link {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .faq-link:hover {
-            text-decoration: underline;
-        }
-
-        /* قسم الاتصال */
-        .contact-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            border-radius: 30px;
-            padding: 60px 40px;
-            text-align: center;
-            border: 1px solid #334155;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item .icon {
-            font-size: 32px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .contact-item a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: #FFD700;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: #1e293b;
-            color: #38bdf8;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 20px;
-            transition: all 0.3s;
-            border: 1px solid #334155;
-        }
-
-        .social-link:hover {
-            background: #38bdf8;
-            color: #0f172a;
-            transform: translateY(-3px);
-            border-color: #FFD700;
-        }
-
-        /* الفوتر */
-        .footer {
-            background: #020617;
-            padding: 60px 0 30px;
-            margin-top: 80px;
-            border-top: 1px solid #334155;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            font-size: 32px;
-            font-weight: 900;
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-
-        .footer-logo .gold {
-            color: #FFD700;
-        }
-
-        .footer-description {
-            color: #94a3b8;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .footer-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #38bdf8;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-        }
-
-        .footer-bottom a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-
-        .footer-bottom a:hover {
-            text-decoration: underline;
-        }
-
-        /* تأثيرات متفرقة */
-        .glow-text {
-            animation: glow 3s infinite;
-        }
-
-        .gold-text {
-            color: #FFD700;
-        }
-
-        .divider {
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(90deg, #38bdf8, #FFD700);
-            margin: 30px auto;
-            border-radius: 2px;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- قسم الهيرو الرئيسي -->
-    <section class="hero">
-        <div class="container">
-            <h1>dhb<span class="gold">sys</span></h1>
-            <h2>دهب سيستمز <span class="gold">✨</span><br>الأنظمة الذهبية لإدارة الأعمال والضرائب</h2>
-            <p>حلول متكاملة لجميع برامج الأعمال: الإيصال الإلكتروني، الفاتورة الضريبية، برامج المدارس، وإدارة المحلات والشركات</p>
-            <div>
-                <a href="#programs" class="btn btn-primary">تصفح البرامج</a>
-                <a href="#contact" class="btn btn-secondary">اتصل بنا</a>
-            </div>
-        </div>
-    </section>
+<!-- HEADER -->
+<header>
+<div class="container nav">
+<div class="logo">dhbsys</div>
+<nav class="menu">
+<a href="#systems">الأنظمة</a>
+<a href="#features">المميزات</a>
+<a href="#video">فيديو الشرح</a>
+<a href="#pricing">الأسعار</a>
+<a href="#contact">اتصل بنا</a>
+</nav>
+<div class="auth">
+<a href="https://portal.dhbsys.com/login" class="login">تسجيل الدخول</a>
+<a href="https://portal.dhbsys.com/register" class="register">إنشاء حساب</a>
+</div>
+</div>
+</header>
 
-    <!-- قسم البرامج -->
-    <section class="section" id="programs">
-        <div class="container">
-            <h2 class="section-title">برامجنا الذهبية</h2>
-            <p class="section-subtitle">اختر البرنامج المناسب لعملك من بين مجموعتنا المتميزة من الحلول المحاسبية المتكاملة</p>
-            
-            <div class="programs-grid">
-                
-                <!-- برنامج المدارس -->
-                <div class="program-card">
-                    <div class="program-icon">🏫</div>
-                    <a href="https://abohany2024-001-site1.jtempurl.com" target="_blank">برنامج المدارس</a>
-                    <p>إدارة كاملة للمدارس والطلاب - حضور، غياب، درجات، جداول، تواصل مع أولياء الأمور، وشؤون الطلاب المتكاملة</p>
-                </div>
-
-                <!-- برنامج المحلات والشركات -->
-                <div class="program-card">
-                    <div class="program-icon">🏢</div>
-                    <a href="https://abohany2024-001-site4.jtempurl.com" target="_blank">برنامج المحلات والشركات</a>
-                    <p>إدارة متكاملة للمحلات والشركات: فواتير، مخزون، عملاء، موردين، تقارير مالية، ونقاط بيع متطورة</p>
-                </div>
-
-                <!-- برنامج سوق الخضار -->
-                <div class="program-card">
-                    <div class="program-icon">🥦</div>
-                    <a href="https://abohany2024-001-site3.jtempurl.com" target="_blank">برنامج سوق الخضار للكويت</a>
-                    <p>متابعة المبيعات والتقارير بسهولة - مخصص لتجار الخضار والفواكه مع دعم الميزان والصناديق</p>
-                </div>
-
-                <!-- برنامج الإيصال الإلكتروني -->
-                <div class="program-card">
-                    <div class="program-icon">🧾</div>
-                    <a href="https://abohany2024-001-site2.jtempurl.com" target="_blank">الإيصال الإلكتروني</a>
-                    <p>حل قانوني متوافق مع مصلحة الضرائب المصرية - طباعة إيصالات ضريبية معتمدة QR كود</p>
-                </div>
-
-                <!-- برنامج إضافي 1 -->
-                <div class="program-card">
-                    <div class="program-icon">📊</div>
-                    <a href="https://abohany2024-001-site1.jtempurl.com" target="_blank">برنامج الحسابات العامة</a>
-                    <p>دفاتر أستاذ، ميزان مراجعة، قيود يومية، تقارير مالية متكاملة لجميع الأنشطة التجارية</p>
-                </div>
-
-                <!-- برنامج إضافي 2 -->
-                <div class="program-card">
-                    <div class="program-icon">👥</div>
-                    <a href="https://abohany2024-001-site4.jtempurl.com" target="_blank">برنامج الموارد البشرية</a>
-                    <p>إدارة شؤون الموظفين، الرواتب، الإجازات، الحضور والانصراف، والتقييمات الدورية</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-   <!-- قسم شرح الفيديو -->
-<section class="section">
-    <div class="container">
-        <div class="video-section">
-            <h2 class="section-title">شاهد شرح البرامج</h2>
-            <p class="section-subtitle">تعرف على مميزات برامجنا من خلال الفيديوهات التوضيحية</p>
-            
-            <div class="video-wrapper">
-                <!-- الفيديو الأول - تم تعديل الرابط إلى رابط embed -->
-                <iframe src="https://www.youtube.com/embed/V0JuKpxm74k" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                </iframe>
-                
-                <!-- الفيديو الثاني - تم تعديل الرابط إلى رابط embed -->
-                <iframe src="https://www.youtube.com/embed/wgpPfhUNM28" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                </iframe>             
-            </div>
-            
-            <div style="text-align: center;">
-                <a href="https://www.youtube.com/channel/UCgD1JQPca_DMdNK63PAm5tg" target="_blank" class="youtube-link">
-                    🔔 اشترك في قناتنا على يوتيوب
-                </a>
-            </div>
-        </div>
-    </div>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1>الحلول الذهبية لإدارة أعمالك</h1>
+<p>أنظمة محاسبية وإدارية متكاملة للشركات والمدارس والمخازن تعمل عبر الإنترنت بسهولة وأمان</p>
+<div class="hero-buttons">
+<a href="https://portal.dhbsys.com/register" class="start">ابدأ التجربة المجانية</a>
+<a href="#systems" class="systems-btn">استعرض الأنظمة</a>
+</div>
+</div>
 </section>
 
-<style>
-/* إضافة CSS لعرض الفيديوهات بجانب بعضها */
-.video-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* تقسيم العرض إلى عمودين متساويين */
-    gap: 20px; /* مسافة بين الفيديوهات */
-    margin-bottom: 30px;
-}
+<!-- SYSTEMS -->
+<section id="systems" class="systems-section">
+<div class="container">
+<h2>أنظمة dhbsys</h2>
+<div class="grid">
+<div class="card">
+<h3>نظام إدارة المدارس</h3>
+<p>إدارة الطلاب والرسوم والحضور والتقارير</p>
+<a href="https://school.dhbsys.com">تشغيل النظام</a>
+</div>
+<div class="card">
+<h3>نظام إدارة الشركات</h3>
+<p>إدارة الفواتير والعملاء والمصروفات</p>
+<a href="https://company.dhbsys.com">تشغيل النظام</a>
+</div>
+<div class="card">
+<h3>نظام إدارة المخازن</h3>
+<p>إدارة المنتجات والجرد والوارد والصادر</p>
+<a href="https://store.dhbsys.com">تشغيل النظام</a>
+</div>
+<div class="card">
+<h3>نظام الإيصال الإلكتروني</h3>
+<p>إصدار الإيصالات وربطها مع الأنظمة المحاسبية</p>
+<a href="#">عرض التفاصيل</a>
+</div>
+</div>
+</div>
+</section>
 
-.video-wrapper iframe {
-    width: 100%;
-    height: 315px; /* ارتفاع مناسب للفيديو */
-    border: none;
-    border-radius: 8px; /* زوايا دائرية خفيفة */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* ظل خفيف */
-}
+<!-- FEATURES -->
+<section id="features" class="features">
+<div class="container">
+<h2>لماذا dhbsys ؟</h2>
+<div class="feature-grid">
+<div class="feature">
+<h3>تشغيل عبر الإنترنت</h3>
+<p>يمكنك استخدام الأنظمة من أي مكان وفي أي وقت.</p>
+</div>
+<div class="feature">
+<h3>أمان عالي</h3>
+<p>حماية البيانات وقواعد البيانات بأحدث التقنيات.</p>
+</div>
+<div class="feature">
+<h3>سهولة الاستخدام</h3>
+<p>واجهة بسيطة وسهلة لجميع المستخدمين.</p>
+</div>
+<div class="feature">
+<h3>تقارير متقدمة</h3>
+<p>تقارير مالية وإدارية دقيقة تساعدك على اتخاذ القرار.</p>
+</div>
+</div>
+</div>
+</section>
 
-/* للشاشات الصغيرة (الموبايل) */
-@media (max-width: 768px) {
-    .video-wrapper {
-        grid-template-columns: 1fr; /* فيديو واحد تحت الآخر */
-    }
-    
-    .video-wrapper iframe {
-        height: 250px; /* ارتفاع أقل للشاشات الصغيرة */
-    }
-}
+<!-- VIDEO SECTION -->
+<section id="video" class="video-section">
+<h2>فيديو شرح الأنظمة</h2>
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="شرح الأنظمة" frameborder="0" allowfullscreen></iframe>
+</section>
 
-/* تنسيق زر اليوتيوب */
-.youtube-link {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #FF0000;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+<div class="container">
+<h2>خطط الاشتراك</h2>
+<div class="pricing-grid">
+<div class="plan">
+<h3>الباقة الأساسية</h3>
+<p>10$ / شهر</p>
+<ul>
+<li>برنامج واحد</li>
+<li>حد أقصى 50 مستخدم/طالب</li>
+<li>دعم عبر البريد الإلكتروني</li>
+</ul>
+<a href="https://portal.dhbsys.com/register">اشتراك الآن</a>
+</div>
+<div class="plan">
+<h3>الباقة المتقدمة</h3>
+<p>25$ / شهر</p>
+<ul>
+<li>حتى 3 برامج</li>
+<li>حد أقصى 200 مستخدم/طالب</li>
+<li>دعم فني سريع</li>
+</ul>
+<a href="https://portal.dhbsys.com/register">اشتراك الآن</a>
+</div>
+<div class="plan">
+<h3>الباقة الاحترافية</h3>
+<p>50$ / شهر</p>
+<ul>
+<li>جميع البرامج</li>
+<li>عدد غير محدود من المستخدمين</li>
+<li>دعم مباشر 24/7</li>
+</ul>
+<a href="https://portal.dhbsys.com/register">اشتراك الآن</a>
+</div>
+</div>
+</div>
+</section>
 
-.youtube-link:hover {
-    background-color: #CC0000;
-}
-</style>
-    <!-- الأسئلة الشائعة -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">الأسئلة الشائعة</h2>
-            <p class="section-subtitle">إجابات على أكثر الأسئلة التي تهم عملائنا</p>
-            
-            <div class="faq-grid">
-                
-                <div class="faq-item">
-                    <h4>❓ هل البرامج متوافقة مع مصلحة الضرائب المصرية؟</h4>
-                    <p>نعم، جميع برامجنا معتمدة ومتوافقة مع متطلبات مصلحة الضرائب المصرية</p>
-                    <a href="https://example.com/zatca-compliance" target="_blank" class="faq-link">شاهد شهادة الاعتماد ←</a>
-                </div>
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<h2>ابدأ الآن بإدارة عملك باحترافية</h2>
+<a href="https://portal.dhbsys.com/register">إنشاء حساب مجاني</a>
+</div>
+</section>
 
-                <div class="faq-item">
-                    <h4>❓ هل توفرون تدريب على البرامج؟</h4>
-                    <p>نعم، نوفر تدريب عن بعد وحضوري حسب رغبتك مع مدربين متخصصين.</p>
-                    <a href="https://example.com/training" target="_blank" class="faq-link">سجل في دورة تدريبية ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل يمكن تجربة البرنامج قبل الشراء؟</h4>
-                    <p>نعم، نوفر نسخة تجريبية مجانية لمدة 14 يوماً لكافة برامجنا.</p>
-                    <a href="https://example.com/free-trial" target="_blank" class="faq-link">جرّب النسخة المجانية الآن ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ كيف يتم الدعم الفني؟</h4>
-                    <p>عبر الواتساب، البريد الإلكتروني، والهاتف طوال أيام العمل من 9 صباحاً إلى 9 مساءً.</p>
-                    <a href="#contact" class="faq-link">انتقل لمعلومات الاتصال ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل تدعمون التحديثات؟</h4>
-                    <p>نعم، نوفر تحديثات دورية مجانية للبرامج مع إضافة مميزات جديدة.</p>
-                    <a href="https://example.com/updates" target="_blank" class="faq-link">تعرف على آخر التحديثات ←</a>
-                </div>
-
-                <div class="faq-item">
-                    <h4>❓ هل يوجد نسخة سحابية؟</h4>
-                    <p>نعم، جميع برامجنا متوفرة بنسختين: محلية On-Premise وسحابية Cloud.</p>
-                    <a href="https://example.com/cloud" target="_blank" class="faq-link">اكتشف المميزات السحابية ←</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم الاتصال -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="contact-section">
-                <h2 class="section-title">تواصل معنا</h2>
-                <p class="section-subtitle">نحن هنا للإجابة على استفساراتك ومساعدتك في اختيار البرنامج المناسب</p>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <span style="display:block; color:#94a3b8;">دمياط الجديده، جمهورية مصر العربية</span>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">📞</span>
-                        <a href="tel:+201501804675">+201501804675</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">📧</span>
-                        <a href="mailto:info@dhbsys.com">info@dhbsys.com</a>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <span class="icon">💬</span>
-                        <a href="https://wa.me/00201501804675" target="_blank">واتساب</a>
-                    </div>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://twitter.com/dhbsys" target="_blank" class="social-link">🐦</a>
-                    <a href="https://linkedin.com/company/dhbsys" target="_blank" class="social-link">🔗</a>
-                    <a href="https://facebook.com/dhbsys" target="_blank" class="social-link">📘</a>
-                    <a href="https://instagram.com/dhbsys" target="_blank" class="social-link">📷</a>
-                    <a href="https://t.me/dhbsys" target="_blank" class="social-link">📱</a>
-                    <a href="https://youtube.com/@dhbsys" target="_blank" class="social-link">▶️</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الفوتر -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <div class="footer-logo">dhb<span class="gold">sys</span></div>
-                    <p class="footer-description">
-                        دهب سيستمز - الحلول الذهبية لأنظمة المحاسبة وإدارة الأعمال. 
-                        نقدم برامج متكاملة تلبي احتياجات جميع القطاعات.
-                    </p>
-                </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">روابط سريعة</h3>
-                    <div class="footer-links">
-                        <a href="#programs">البرامج</a>
-                        <a href="#contact">اتصل بنا</a>
-                        <a href="https://example.com/about">من نحن</a>
-                        <a href="https://example.com/blog">المدونة</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">الدعم</h3>
-                    <div class="footer-links">
-                        <a href="https://example.com/help">مركز المساعدة</a>
-                        <a href="https://example.com/faq">الأسئلة الشائعة</a>
-                        <a href="https://example.com/training">التدريب</a>
-                        <a href="https://example.com/support">الدعم الفني</a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 style="color:#38bdf8; margin-bottom:20px;">القانوني</h3>
-                    <div class="footer-links">
-                        <a href="https://example.com/privacy">سياسة الخصوصية</a>
-                        <a href="https://example.com/terms">شروط الاستخدام</a>
-                        <a href="https://example.com/cookies">سياسة الكوكيز</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© 2026 <a href="https://www.dhbsys.com">dhbsys.com</a> - جميع الحقوق محفوظة لـ دهب سيستمز</p>
-                <p style="margin-top:10px; font-size:14px;">الحلول الذهبية لأنظمة الأعمال ✨</p>
-            </div>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer id="contact">
+<p>© dhbsys 2026 - جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
