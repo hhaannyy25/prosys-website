@@ -9,15 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 
 <style>
-/* ---------------------- RESET ---------------------- */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Cairo',sans-serif;background:#0f172a;color:#fff;line-height:1.8;}
+body{font-family:'Cairo',sans-serif;background:#0f172a;color:#fff;line-height:1.8;scroll-behavior:smooth;}
 a{text-decoration:none;color:inherit;}
 
-/* ---------------------- CONTAINER ---------------------- */
+/* CONTAINER */
 .container{width:90%;max-width:1200px;margin:auto;}
 
-/* ---------------------- HEADER ---------------------- */
+/* HEADER */
 header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;z-index:100;}
 .nav{display:flex;justify-content:space-between;align-items:center;height:70px;}
 .logo{font-size:26px;font-weight:900;color:#38bdf8;}
@@ -29,17 +28,18 @@ header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;
 .register{background:#38bdf8;padding:8px 16px;border-radius:6px;color:#000;font-weight:bold;transition:0.3s;}
 .register:hover{opacity:0.85;}
 
-/* ---------------------- HERO ---------------------- */
+/* HERO */
 .hero{padding:120px 0;text-align:center;background:linear-gradient(180deg,#020617,#0f172a);}
 .hero h1{font-size:48px;margin-bottom:20px;line-height:1.2;}
 .hero p{color:#cbd5e1;margin-bottom:30px;font-size:20px;}
 .hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;}
-.start{background:#38bdf8;padding:14px 30px;border-radius:8px;color:#000;font-weight:bold;transition:0.3s;}
-.start:hover{opacity:0.85;}
-.systems-btn{border:1px solid #38bdf8;padding:14px 30px;border-radius:8px;color:#38bdf8;font-weight:bold;transition:0.3s;}
-.systems-btn:hover{background:#38bdf8;color:#000;}
+.start, .systems-btn{padding:14px 30px;border-radius:8px;font-weight:bold;transition:0.3s;cursor:pointer;}
+.start{background:#38bdf8;color:#000;}
+.start:hover{box-shadow:0 0 20px #38bdf8;transform:translateY(-3px);}
+.systems-btn{border:1px solid #38bdf8;color:#38bdf8;}
+.systems-btn:hover{background:#38bdf8;color:#000;box-shadow:0 0 20px #38bdf8;transform:translateY(-3px);}
 
-/* ---------------------- SYSTEMS ---------------------- */
+/* SYSTEMS */
 .systems-section{padding:80px 0;}
 .systems-section h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
@@ -47,9 +47,10 @@ header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;
 .card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(56,189,248,0.3);}
 .card h3{margin-bottom:12px;font-size:22px;color:#38bdf8;}
 .card p{color:#94a3b8;margin-bottom:15px;font-size:16px;}
-.card a{color:#38bdf8;font-weight:bold;}
+.card a{color:#38bdf8;font-weight:bold;transition:0.3s;}
+.card a:hover{text-decoration:underline;}
 
-/* ---------------------- FEATURES ---------------------- */
+/* FEATURES */
 .features{padding:80px 0;background:#020617;}
 .features h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
@@ -58,12 +59,12 @@ header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;
 .feature h3{margin-bottom:12px;font-size:20px;color:#38bdf8;}
 .feature p{color:#94a3b8;font-size:16px;}
 
-/* ---------------------- VIDEO ---------------------- */
+/* VIDEO SECTION */
 .video-section{padding:80px 0;text-align:center;}
 .video-section h2{color:#38bdf8;font-size:36px;margin-bottom:30px;}
-.video-section iframe{width:80%;max-width:800px;height:450px;border-radius:12px;}
+.video-section iframe{width:80%;max-width:800px;height:450px;border-radius:12px;transition:opacity 1s;opacity:0;}
 
-/* ---------------------- PRICING ---------------------- */
+/* PRICING */
 .pricing{padding:80px 0;background:#020617;}
 .pricing h2{text-align:center;margin-bottom:50px;font-size:36px;color:#38bdf8;}
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
@@ -74,19 +75,18 @@ header{background:#020617;border-bottom:1px solid #1e293b;position:sticky;top:0;
 .plan ul{list-style:none;margin-bottom:15px;}
 .plan ul li{margin:10px 0;color:#94a3b8;}
 .plan a{display:inline-block;background:#38bdf8;color:#000;padding:10px 25px;border-radius:8px;font-weight:bold;transition:0.3s;}
-.plan a:hover{opacity:0.85;}
+.plan a:hover{box-shadow:0 0 20px #38bdf8;transform:translateY(-3px);}
 
-/* ---------------------- CTA ---------------------- */
+/* CTA */
 .cta{text-align:center;padding:80px 0;}
 .cta a{background:#38bdf8;padding:14px 30px;border-radius:8px;color:#000;font-weight:bold;transition:0.3s;}
-.cta a:hover{opacity:0.85;}
+.cta a:hover{box-shadow:0 0 20px #38bdf8;transform:translateY(-3px);}
 
-/* ---------------------- FOOTER ---------------------- */
+/* FOOTER */
 footer{background:#020617;text-align:center;padding:30px 0;margin-top:50px;color:#94a3b8;}
-
 </style>
-
 </head>
+
 <body>
 
 <!-- HEADER -->
@@ -176,7 +176,7 @@ footer{background:#020617;text-align:center;padding:30px 0;margin-top:50px;color
 <!-- VIDEO SECTION -->
 <section id="video" class="video-section">
 <h2>فيديو شرح الأنظمة</h2>
-<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="شرح الأنظمة" frameborder="0" allowfullscreen></iframe>
+<iframe id="tutorialVideo" src="https://www.youtube.com/embed/YOUR_VIDEO_ID?enablejsapi=1&rel=0" title="شرح الأنظمة" frameborder="0" allowfullscreen></iframe>
 </section>
 
 <!-- PRICING -->
@@ -230,6 +230,19 @@ footer{background:#020617;text-align:center;padding:30px 0;margin-top:50px;color
 <footer id="contact">
 <p>© dhbsys 2026 - جميع الحقوق محفوظة</p>
 </footer>
+
+<script>
+// VIDEO AUTO PLAY WHEN IN VIEW
+const video = document.getElementById('tutorialVideo');
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+}
+});
+},{threshold:0.5});
+observer.observe(video);
+</script>
 
 </body>
 </html>
