@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dhbsys | الحلول الذهبية للمحاسبة والإدارة</title>
-    <meta name="description" content="دهب سيستمز - أنظمة محاسبية وإدارية متكاملة للشركات والمدارس والمخازن عبر الإنترنت">
-    <meta name="keywords" content="برامج محاسبة, برنامج مدارس, برنامج شركات, برنامج مخازن, dhbsys">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <title>dhbsys | دهب سيستمز - الحلول الذهبية للمحاسبة</title>
+    
+    <!-- الخطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- تحسينات إضافية -->
+    <meta name="description" content="دهب سيستمز - برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار">
+    <meta name="keywords" content="برامج محاسبية, محاسبة, دهب سيستمز, برنامج مدارس, برنامج محلات, إيصال إلكتروني, dhbsys">
+    
+    <!-- Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
+        /* المتغيرات الأساسية - خلفية فاتحة */
         * {
             margin: 0;
             padding: 0;
@@ -17,551 +25,574 @@
 
         body {
             font-family: 'Cairo', sans-serif;
-            background: #f8fafc;  /* خلفية فاتحة ونظيفة */
+            background: #f9fafc;
             color: #1e293b;
-            line-height: 1.6;
-            scroll-behavior: smooth;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* CONTAINER */
         .container {
             width: 90%;
             max-width: 1280px;
-            margin: auto;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-
-        /* HEADER الحديث */
-        header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .nav {
+        
+        /* ===== التصميم الجديد بالهوية الذهبية ===== */
+        
+        /* رأس الصفحة - شعار مطوّر بالذهب */
+        .header {
+            padding: 25px 0 15px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            height: 80px;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(200, 160, 94, 0.25);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 0 0 30px 30px;
+            padding: 15px 30px;
+            box-shadow: 0 5px 25px -10px #c8a05e30;
         }
-
+        
         .logo {
-            font-size: 28px;
-            font-weight: 900;
-            color: #0f2b4b;
-            letter-spacing: -0.5px;
-        }
-        .logo span {
-            color: #c8a05e; /* لمسة ذهبية */
-        }
-
-        .menu {
             display: flex;
-            gap: 5px;
+            align-items: center;
+            gap: 15px;
         }
-        .menu a {
-            margin: 0 8px;
+        
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(145deg, #c8a05e, #9e7b4b);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 18px rgba(200, 160, 94, 0.4);
+        }
+        
+        .logo-icon i {
+            font-size: 38px;
+            color: white;
+        }
+        
+        .logo-text h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            line-height: 1.2;
+            background: linear-gradient(to left, #c8a05e, #9e7b4b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .logo-text span {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 600;
+            display: block;
+            margin-top: -5px;
+        }
+        
+        /* قائمة التنقل */
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .nav-links a {
             color: #334155;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 40px;
-            transition: 0.25s;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            color: #c8a05e;
+            border-bottom-color: #c8a05e;
+        }
+        
+        /* القسم الرئيسي (Hero) */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 30px 0 70px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-content {
+            flex: 1 1 450px;
+        }
+        
+        .hero-badge {
+            background: rgba(200, 160, 94, 0.1);
+            border: 1px solid rgba(200, 160, 94, 0.3);
+            border-radius: 30px;
+            padding: 5px 20px;
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #9e7b4b;
+            font-weight: 700;
             font-size: 0.95rem;
         }
-        .menu a:hover {
-            background: #f1f5f9;
+        
+        .hero-content h2 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.3;
+            margin-bottom: 20px;
             color: #0f2b4b;
         }
-        .menu a.active {
-            background: #0f2b4b;
-            color: white;
-        }
-
-        .auth {
-            display: flex;
-            gap: 12px;
-        }
-        .login {
-            border: 1.5px solid #e2e8f0;
-            padding: 10px 24px;
-            border-radius: 40px;
-            color: #334155;
-            font-weight: 600;
-            transition: 0.25s;
-            background: white;
-            font-size: 0.9rem;
-        }
-        .login:hover {
-            border-color: #c8a05e;
-            color: #c8a05e;
-        }
-        .register {
-            background: #0f2b4b;
-            padding: 10px 28px;
-            border-radius: 40px;
-            color: white;
-            font-weight: 700;
-            transition: 0.25s;
-            box-shadow: 0 10px 18px -8px rgba(15,43,75,0.3);
-            font-size: 0.9rem;
-        }
-        .register:hover {
-            background: #1b3b5c;
-            transform: translateY(-2px);
-        }
-
-        /* HERO متطور */
-        .hero {
-            padding: 100px 0 120px;
-            background: linear-gradient(145deg, #ffffff 0%, #f2f6fc 100%);
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(200,160,94,0.08) 0%, transparent 70%);
-            top: -100px;
-            left: -100px;
-            border-radius: 50%;
-        }
-        .hero::after {
-            content: "";
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(15,43,75,0.04) 0%, transparent 70%);
-            bottom: -200px;
-            right: -100px;
-            border-radius: 50%;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-text h1 {
-            font-size: 52px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 25px;
-            color: #0b1e33;
-        }
-        .hero-text h1 span {
+        
+        .hero-highlight {
             color: #c8a05e;
             position: relative;
             display: inline-block;
         }
-        .hero-text h1 span::after {
-            content: "";
+        
+        .hero-highlight::after {
+            content: '';
             position: absolute;
-            width: 100%;
-            height: 6px;
-            background: rgba(200,160,94,0.3);
-            bottom: 8px;
+            bottom: 5px;
             left: 0;
-            z-index: -1;
+            width: 100%;
+            height: 8px;
+            background: rgba(200, 160, 94, 0.2);
             border-radius: 10px;
+            z-index: -1;
         }
-        .hero-text p {
+        
+        .hero-content p {
+            font-size: 1.3rem;
             color: #475569;
-            margin-bottom: 35px;
-            font-size: 1.25rem;
-            max-width: 90%;
+            margin-bottom: 30px;
+            max-width: 600px;
         }
-
-        .hero-buttons {
-            display: flex;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-        .btn-primary {
-            background: #0f2b4b;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 700;
-            color: white;
-            cursor: pointer;
-            transition: 0.25s;
-            box-shadow: 0 20px 25px -10px rgba(15,43,75,0.3);
-            font-size: 1rem;
-            border: 1px solid #0f2b4b;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-primary i {
-            font-size: 1.2rem;
-        }
-        .btn-primary:hover {
-            background: #1b3b5c;
-            transform: translateY(-3px);
-            box-shadow: 0 25px 30px -8px #0f2b4b70;
-        }
-        .btn-outline {
-            background: transparent;
-            border: 1.5px solid #cbd5e1;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-weight: 600;
-            color: #1e293b;
-            cursor: pointer;
-            transition: 0.25s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-outline i {
-            color: #c8a05e;
-        }
-        .btn-outline:hover {
-            border-color: #c8a05e;
-            background: white;
-        }
-
+        
         .hero-image {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400"><path fill="%23e9eef3" d="M0,200 Q125,150 250,200 T500,200 L500,400 L0,400 Z"/><rect x="120" y="120" width="260" height="160" rx="20" fill="white" stroke="%23cbd5e1" stroke-width="2"/><circle cx="200" cy="180" r="12" fill="%23c8a05e"/><circle cx="300" cy="180" r="12" fill="%230f2b4b"/><path d="M170 240 L230 240 L210 280 L150 280 Z" fill="%23c8a05e" opacity="0.5"/><path d="M280 240 L340 240 L320 280 L260 280 Z" fill="%230f2b4b" opacity="0.5"/></svg>');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 340px;
-            border-radius: 30px;
-            box-shadow: 0 30px 40px -20px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
-
-        /* قسم المميزات */
-        .features {
-            padding: 100px 0;
+            flex: 1 1 350px;
             background: white;
+            border-radius: 40px;
+            padding: 40px 20px;
+            border: 1px solid #eef2f6;
+            text-align: center;
+            box-shadow: 0 25px 35px -20px #c8a05e;
         }
+        
+        .hero-image i {
+            font-size: 160px;
+            color: #c8a05e;
+            opacity: 0.6;
+            filter: drop-shadow(0 0 15px #c8a05e80);
+        }
+        
+        .hero-image p {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #c8a05e;
+            font-weight: 700;
+            background: #f8fafc;
+            padding: 8px 25px;
+            border-radius: 60px;
+            display: inline-block;
+            border: 1px solid #e9edf4;
+        }
+        
+        /* عنوان القسم */
         .section-title {
             text-align: center;
+            margin: 80px 0 40px;
+        }
+        
+        .section-title h3 {
             font-size: 2.5rem;
             font-weight: 800;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
             color: #0f2b4b;
-            margin-bottom: 20px;
         }
-        .section-title span {
-            color: #c8a05e;
+        
+        .section-title h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 4px;
+            background: linear-gradient(to left, #c8a05e, #0f2b4b);
+            border-radius: 4px;
         }
-        .section-sub {
-            text-align: center;
-            color: #64748b;
-            max-width: 700px;
-            margin: 0 auto 60px;
-            font-size: 1.2rem;
-        }
-
-        .features-grid {
+        
+        /* شبكة البطاقات */
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
         }
-
-        .feature-card {
-            background: #f8fafc;
-            padding: 40px 30px;
-            border-radius: 30px;
-            transition: 0.3s;
+        
+        .service-card {
+            background: white;
             border: 1px solid #eef2f6;
-            box-shadow: 0 20px 30px -15px #e2e8f0;
+            border-radius: 30px;
+            padding: 35px 25px 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 30px -20px #94a3b8;
+            text-align: center;
         }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: #c8a05e50;
-            box-shadow: 0 30px 40px -15px #c8a05e30;
+        
+        .service-card:hover {
+            transform: translateY(-12px);
+            border-color: #c8a05e;
+            box-shadow: 0 25px 35px -15px #c8a05e;
         }
-        .feature-icon {
-            background: #0f2b4b;
-            width: 70px;
-            height: 70px;
-            border-radius: 20px;
+        
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            background: #f8fafc;
+            border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
+            margin: 0 auto 25px;
+            border: 1px solid #c8a05e40;
         }
-        .feature-icon i {
-            font-size: 2rem;
-            color: white;
+        
+        .card-icon i {
+            font-size: 42px;
+            color: #c8a05e;
         }
-        .feature-card:nth-child(2) .feature-icon { background: #c8a05e; }
-        .feature-card:nth-child(3) .feature-icon { background: #2c5f4a; }
-        .feature-card h3 {
-            font-size: 1.7rem;
+        
+        .service-card h4 {
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 15px;
-        }
-        .feature-card p {
-            color: #475569;
-            line-height: 1.8;
-        }
-
-        /* CTA */
-        .cta {
-            background: linear-gradient(135deg, #f2f6fc, #ffffff);
-            padding: 70px 0;
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .cta-box {
-            background: white;
-            border-radius: 60px;
-            padding: 70px 50px;
-            box-shadow: 0 30px 50px -30px #94a3b8;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border: 1px solid #e9edf2;
-        }
-        .cta-box h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: #0f2b4b;
-            margin-bottom: 20px;
-        }
-        .cta-box p {
-            max-width: 600px;
-            color: #475569;
-            margin-bottom: 40px;
-            font-size: 1.2rem;
-        }
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .btn-large {
-            padding: 18px 50px;
-            font-size: 1.1rem;
-        }
-
-        /* FOOTER */
-        footer {
-            background: white;
-            padding: 50px 0 30px;
-            border-top: 1px solid #e2e8f0;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1.5fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-col p {
-            color: #475569;
-            margin: 20px 0;
-        }
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
             color: #0f2b4b;
         }
-        .footer-logo span { color: #c8a05e; }
-        .social {
-            display: flex;
-            gap: 15px;
-        }
-        .social a {
-            background: #f1f5f9;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #334155;
-            transition: 0.2s;
-        }
-        .social a:hover {
-            background: #c8a05e;
-            color: white;
-        }
-        .footer-col h4 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col ul li {
-            margin-bottom: 14px;
-        }
-        .footer-col ul li a {
+        
+        .service-card p {
             color: #475569;
-            transition: 0.2s;
+            font-size: 1rem;
+            margin-bottom: 25px;
         }
-        .footer-col ul li a:hover {
+        
+        .card-link {
             color: #c8a05e;
-            padding-right: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            border-bottom: 1px dashed #c8a05e;
+            padding-bottom: 3px;
         }
-        .copyright {
+        
+        .card-link:hover {
+            gap: 12px;
+            color: #9e7b4b;
+        }
+        
+        /* شريط إحصائي */
+        .stats-row {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            border-radius: 80px;
+            padding: 25px 20px;
+            margin: 60px 0 30px;
+            border: 1px solid #eef2f6;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 10px 25px -15px #c8a05e;
+        }
+        
+        .stat-item {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #e2e8f0;
+        }
+        
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #c8a05e;
+            line-height: 1.2;
+        }
+        
+        .stat-label {
             color: #64748b;
             font-size: 0.95rem;
+            font-weight: 600;
         }
-
-        @media (max-width: 992px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
-            .hero-text p { max-width: 100%; }
-            .hero-buttons { justify-content: center; }
-            .hero-image { max-width: 400px; margin: 30px auto 0; }
-            .footer-grid { grid-template-columns: repeat(2,1fr); }
-            .menu { display: none; } /* تبسيط للموبايل */
+        
+        /* قسم المميزات */
+        .features {
+            display: flex;
+            gap: 25px;
+            margin: 70px 0;
+            flex-wrap: wrap;
         }
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 36px; }
-            .btn-primary, .btn-outline { padding: 12px 30px; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .auth .login, .auth .register { padding: 8px 16px; }
+        
+        .feature-box {
+            flex: 1 1 200px;
+            background: white;
+            border-radius: 30px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #eef2f6;
+            transition: 0.3s;
+        }
+        .feature-box:hover {
+            border-color: #c8a05e;
+        }
+        
+        .feature-box i {
+            font-size: 45px;
+            color: #c8a05e;
+            margin-bottom: 20px;
+        }
+        
+        .feature-box h5 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0f2b4b;
+        }
+        
+        .feature-box p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+        
+        /* زر ذهبي أنيق */
+        .btn-gold {
+            background: #c8a05e;
+            border: none;
+            color: white;
+            font-weight: 800;
+            font-size: 1.2rem;
+            padding: 14px 42px;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 15px 25px -10px #c8a05e;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            border: 1px solid #e2b87a;
+        }
+        
+        .btn-gold:hover {
+            background: #dbb16d;
+            transform: translateY(-4px);
+            box-shadow: 0 22px 30px -8px #c8a05e;
+        }
+        
+        /* الفوتر */
+        .footer {
+            margin-top: 100px;
+            padding: 50px 0 30px;
+            border-top: 1px solid rgba(200, 160, 94, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .footer-col p {
+            color: #475569;
+            max-width: 280px;
+        }
+        
+        .footer-col h6 {
+            font-size: 1.5rem;
+            color: #c8a05e;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #334155;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #c8a05e;
+            padding-right: 6px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 25px 0 10px;
+            color: #64748b;
+            border-top: 1px solid rgba(200,160,94,0.2);
+            margin-top: 30px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h2 { font-size: 2.5rem; }
+            .header { flex-direction: column; gap: 20px; }
+            .nav-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
 <body>
-
-<header>
-    <div class="container nav">
-        <div class="logo">dhb<span>sys</span></div>
-        <div class="menu">
-            <a href="#" class="active">الرئيسية</a>
-            <a href="#">الأنظمة</a>
-            <a href="#">المميزات</a>
-            <a href="#">الأسعار</a>
-            <a href="#">اتصل بنا</a>
-        </div>
-        <div class="auth">
-            <a href="#" class="login">تسجيل دخول</a>
-            <a href="#" class="register">ابدأ مجاناً</a>
-        </div>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container hero-content">
-        <div class="hero-text">
-            <h1>حلول <span>ذهبية</span> للمحاسبة<br>وإدارة أعمالك بذكاء</h1>
-            <p>أنظمة محاسبية وإدارية متكاملة للشركات، المدارس، والمخازن. واجهة عصرية وسهلة تعتمد على السحابة.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary"><i class="fas fa-rocket"></i> ابدأ تجربة مجانية</button>
-                <button class="btn-outline"><i class="fas fa-play"></i> شاهد العرض</button>
-            </div>
-        </div>
-        <div class="hero-image"></div>
-    </div>
-</section>
-
-<section class="features">
     <div class="container">
-        <h2 class="section-title">لماذا <span>dhbsys</span> هو الخيار الأمثل؟</h2>
-        <p class="section-sub">صممنا نظاماً متكاملاً يغطي جميع احتياجاتك المالية والإدارية بكل احترافية</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>محاسبة متكاملة</h3>
-                <p>قيود يومية، ميزان مراجعة، ميزانية عمومية، وقوائم دخل بلمسة زر. تقارير دقيقة وفي الوقت الحقيقي.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-school"></i></div>
-                <h3>إدارة المدارس</h3>
-                <p>شؤون طلاب، غياب، درجات، تواصل مع أولياء الأمور، والفواتير الدراسية بنظام آلي.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-boxes"></i></div>
-                <h3>مخازن ومبيعات</h3>
-                <p>إدارة المخزون، المشتريات، المبيعات، وتتبع المنتجات بالأصناف والباركود.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                <h3>سحابة آمنة</h3>
-                <p>بياناتك مشفرة وموجودة على خوادم عالية الأمان، مع نسخ احتياطي يومي واسترجاع فوري.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="cta">
-    <div class="container">
-        <div class="cta-box">
-            <h2>استعد للتحول الرقمي مع dhbsys</h2>
-            <p>انضم إلى أكثر من 5000 شركة ومؤسسة تثق في حلولنا الذهبية. أول 30 يوم مجاناً.</p>
-            <div class="cta-buttons">
-                <button class="btn-primary btn-large"><i class="fas fa-calendar-check"></i> جرب الآن</button>
-                <button class="btn-outline btn-large"><i class="fas fa-headset"></i> تحدث إلى خبير</button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">dhb<span>sys</span></div>
-                <p>حلول ذهبية مبتكرة لإدارة أعمالكم بسلاسة. الشريك الرقمي الأول لنجاحكم.</p>
-                <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+        <!-- ===== شعار واسم الشركة ===== -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-gem"></i> <!-- رمز الذهب -->
+                </div>
+                <div class="logo-text">
+                    <h1>dhbsys</h1>
+                    <span>دهب سيستمز</span>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>الأنظمة</h4>
-                <ul>
-                    <li><a href="#">برنامج محاسبة</a></li>
-                    <li><a href="#">برنامج مدارس</a></li>
-                    <li><a href="#">برنامج مخازن</a></li>
-                    <li><a href="#">برنامج شركات</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>الدعم</h4>
-                <ul>
-                    <li><a href="#">تواصل معنا</a></li>
-                    <li><a href="#">الأسئلة الشائعة</a></li>
-                    <li><a href="#">المستندات</a></li>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>اتصل بنا</h4>
-                <ul>
-                    <li><i class="fas fa-phone-alt"></i> 011 234 5678</li>
-                    <li><i class="fas fa-envelope"></i> info@dhbsys.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
-                </ul>
+            <div class="nav-links">
+                <a href="#">الرئيسية</a>
+                <a href="#">حلولنا</a>
+                <a href="#">الميزات</a>
+                <a href="#">اتصل بنا</a>
             </div>
         </div>
-        <div class="copyright">
-            © 2026 dhbsys - جميع الحقوق محفوظة. تصميم بأحدث التقنيات.
+        
+        <!-- ===== المقدمة مع شعار الحلول الذهبية ===== -->
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-badge"><i class="fas fa-crown" style="margin-left: 8px;"></i> الحلول الذهبية للمحاسبة</div>
+                <h2>
+                    <span class="hero-highlight">دهب سيستمز</span><br>
+                    شراكتك للنجاح
+                </h2>
+                <p>برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار.</p>
+                <button class="btn-gold"><i class="fas fa-calendar-check"></i> احجز عرضاً تجريبياً</button>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-chart-line"></i>
+                <p>أنظمة ذهبية لأعمالك</p>
+            </div>
+        </div>
+        
+        <!-- ===== بطاقات الخدمات الأربعة ===== -->
+        <div class="section-title">
+            <h3>حلولنا المتكاملة</h3>
+        </div>
+        
+        <div class="cards-grid">
+            <!-- برنامج المدارس -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-school"></i></div>
+                <h4>برنامج المدارس</h4>
+                <p>إدارة متكاملة للرسوم، الحسابات، وشؤون الطلاب والمعلمين.</p>
+                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <!-- برنامج المحلات -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-store"></i></div>
+                <h4>برنامج المحلات</h4>
+                <p>نقاط بيع، مخزون، عملاء، وتقارير دقيقة لمتجرك.</p>
+                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <!-- الإيصال الإلكتروني -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-receipt"></i></div>
+                <h4>الإيصال الإلكتروني</h4>
+                <p>متوافق مع هيئة الزكاة والضريبة والجمارك.</p>
+                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <!-- سوق الخضار -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-carrot"></i></div>
+                <h4>سوق الخضار</h4>
+                <p>حلول متخصصة لتجار الجملة والقطاعي في أسواق الخضار.</p>
+                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+        
+        <!-- شريحة أرقام ثقة -->
+        <div class="stats-row">
+            <div class="stat-item"><span class="stat-number">+500</span> <span class="stat-label">عميل</span></div>
+            <div class="stat-item"><span class="stat-number">15</span> <span class="stat-label">سنوات خبرة</span></div>
+            <div class="stat-item"><span class="stat-number">24/7</span> <span class="stat-label">دعم فني</span></div>
+            <div class="stat-item"><span class="stat-number">+50k</span> <span class="stat-label">فاتورة/يوم</span></div>
+        </div>
+        
+        <!-- ===== قسم المميزات يعزز الكلمات المفتاحية ===== -->
+        <div class="features">
+            <div class="feature-box">
+                <i class="fas fa-chart-line"></i>
+                <h5>برامج محاسبية</h5>
+                <p>نظم متطورة تناسب جميع القطاعات</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-store-alt"></i>
+                <h5>برنامج محلات</h5>
+                <p>إدارة المخزون والمبيعات بذكاء</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-file-invoice"></i>
+                <h5>إيصال إلكتروني</h5>
+                <p>معتمد وموافق للهيئات الرسمية</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-seedling"></i>
+                <h5>سوق الخضار</h5>
+                <p>منصة متكاملة لتجارة الخضار</p>
+            </div>
+        </div>
+    </div> <!-- نهاية container -->
+    
+    <!-- ===== الفوتر ===== -->
+    <div style="background: #f0f5fd; margin-top: 70px; padding-top: 30px;">
+        <div class="container">
+            <div class="footer">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-gem" style="font-size: 38px; color: #c8a05e;"></i>
+                        <h2 style="color: #0f2b4b;">dhbsys</h2>
+                    </div>
+                    <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار.</p>
+                </div>
+                <div class="footer-col">
+                    <h6>روابط سريعة</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">الخدمات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>الدعم</h6>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-phone" style="margin-left: 8px;"></i> 9200xxxxx</a></li>
+                        <li><a href="#"><i class="fas fa-envelope" style="margin-left: 8px;"></i> info@dhbsys.com</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 dhbsys | دهب سيستمز - جميع الحقوق محفوظة. برامج محاسبية للمدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار.
+            </div>
         </div>
     </div>
-</footer>
-
 </body>
 </html>
