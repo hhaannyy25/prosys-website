@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     
     <!-- تحسينات إضافية -->
-    <meta name="description" content="دهب سيستمز - برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار">
-    <meta name="keywords" content="برامج محاسبية, محاسبة, دهب سيستمز, برنامج مدارس, برنامج محلات, إيصال إلكتروني, dhbsys">
+    <meta name="description" content="دهب سيستمز - برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار">
+    <meta name="keywords" content="برامج محاسبة, محاسبة, دهب سيستمز, برنامج مدارس, برنامج محلات, إيصال إلكتروني, برنامج مخازن, سوق الخضار, dhbsys">
     
     <!-- Font Awesome للأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -373,7 +373,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 15px 30px -20px #94a3b8;
             text-align: center;
-            cursor: pointer;
         }
         
         .service-card:hover {
@@ -460,6 +459,57 @@
             font-weight: 600;
         }
         
+        /* ===== قسم الاتصال ===== */
+        .contact-section {
+            background: white;
+            border-radius: 60px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            border: 1px solid #eef2f6;
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            background: #f8fafc;
+            padding: 20px 40px;
+            border-radius: 60px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition: 0.2s;
+        }
+        
+        .contact-item:hover {
+            border-color: #c8a05e;
+            background: white;
+            transform: translateY(-3px);
+        }
+        
+        .contact-item i {
+            font-size: 28px;
+            color: #c8a05e;
+        }
+        
+        .contact-item a, .contact-item span {
+            color: #0f2b4b;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .contact-item a:hover {
+            color: #c8a05e;
+        }
+        
         /* ===== الفوتر ===== */
         .footer {
             margin-top: 100px;
@@ -529,6 +579,7 @@
             gap: 12px;
             margin-top: 20px;
             border: 1px solid #e2b87a;
+            text-decoration: none;
         }
         
         .btn-gold:hover {
@@ -541,6 +592,8 @@
             .header { flex-direction: column; }
             .nav-links { justify-content: center; }
             .pricing-card.popular { transform: scale(1); }
+            .contact-item { padding: 15px 25px; }
+            .contact-item a { font-size: 1rem; }
         }
     </style>
 </head>
@@ -562,7 +615,7 @@
                 <a href="#">الرئيسية</a>
                 <a href="#pricing">الأسعار</a>
                 <a href="#faq">الأسئلة</a>
-                <a href="#">اتصل بنا</a>
+                <a href="#contact">اتصل بنا</a>
             </div>
         </div>
         
@@ -574,7 +627,7 @@
                     <span class="hero-highlight">دهب سيستمز</span><br>
                     شراكتك للنجاح
                 </h2>
-                <p>برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار.</p>
+                <p>برامج محاسبية متكاملة: برامج المدارس، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
             </div>
             <div class="hero-image">
                 <i class="fas fa-chart-line"></i>
@@ -582,42 +635,50 @@
             </div>
         </div>
         
-        <!-- ===== بطاقات الخدمات مع الروابط ===== -->
+        <!-- ===== بطاقات الخدمات مع الروابط الخمسة ===== -->
         <div class="section-title">
             <h3>حلولنا المتكاملة</h3>
         </div>
         
         <div class="cards-grid">
-            <!-- برنامج المدارس مع الرابط المحدد -->
+            <!-- 1. برنامج المدارس -->
             <div class="service-card">
                 <div class="card-icon"><i class="fas fa-school"></i></div>
                 <h4>برنامج المدارس</h4>
                 <p>إدارة متكاملة للرسوم، الحسابات، وشؤون الطلاب والمعلمين.</p>
-                <a href="http://abohany2024-001-site1.jtempurl.com" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="http://abohany2024-001-site1.jtempurl.com/" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
             
-            <!-- برنامج المحلات -->
+            <!-- 2. برنامج المحلات -->
             <div class="service-card">
                 <div class="card-icon"><i class="fas fa-store"></i></div>
                 <h4>برنامج المحلات</h4>
                 <p>نقاط بيع، مخزون، عملاء، وتقارير دقيقة لمتجرك.</p>
-                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+                <a href="http://abohany2024-001-site5.jtempurl.com/" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
             
-            <!-- الإيصال الإلكتروني -->
+            <!-- 3. الإيصال الإلكتروني -->
             <div class="service-card">
                 <div class="card-icon"><i class="fas fa-receipt"></i></div>
                 <h4>الإيصال الإلكتروني</h4>
-                <p>متوافق مع هيئة الزكاة والضريبة والجمارك.</p>
-                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+                <p>متوافق مع مصلحة الضرائب المصرية</p>
+                <a href="http://abohany2024-001-site2.jtempurl.com/" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
             
-            <!-- سوق الخضار -->
+            <!-- 4. سوق الخضار -->
             <div class="service-card">
                 <div class="card-icon"><i class="fas fa-carrot"></i></div>
-                <h4>سوق الخضار</h4>
-                <p>حلول متخصصة لتجار الجملة والقطاعي.</p>
-                <a href="#" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+                <h4سوق الخضار بالكويت</h4>
+                <p> حلول متخصصة لتجار الجملة والقطاعي في أسواق الخضار.</p> 
+                <a href="http://abohany2024-001-site3.jtempurl.com/" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
+            </div>
+            
+            <!-- 5. برنامج المخازن -->
+            <div class="service-card">
+                <div class="card-icon"><i class="fas fa-boxes"></i></div>
+                <h4>برنامج المخازن</h4>
+                <p>إدارة المخزون، المشتريات، المبيعات، وتتبع المنتجات.</p>
+                <a href="http://abohany2024-001-site4.jtempurl.com/" target="_blank" class="card-link">اعرف المزيد <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
         
@@ -636,7 +697,7 @@
                         <li><i class="fas fa-check"></i> دعم فني خلال 24 ساعة</li>
                         <li><i class="fas fa-check"></i> تحديثات دورية</li>
                     </ul>
-                    <button class="btn-pricing" onclick="window.location.href='#contact'">اختر الباقة</button>
+                    <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">اختر الباقة</button>
                 </div>
                 
                 <div class="pricing-card popular">
@@ -650,7 +711,7 @@
                         <li><i class="fas fa-check"></i> تقارير متقدمة</li>
                         <li><i class="fas fa-check"></i> نسخ احتياطي يومي</li>
                     </ul>
-                    <button class="btn-pricing" onclick="window.location.href='#contact'">اختر الباقة</button>
+                    <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">اختر الباقة</button>
                 </div>
                 
                 <div class="pricing-card">
@@ -663,7 +724,7 @@
                         <li><i class="fas fa-check"></i> استشارات مجانية</li>
                         <li><i class="fas fa-check"></i> تخصيص النظام</li>
                     </ul>
-                    <button class="btn-pricing" onclick="window.location.href='#contact'">اختر الباقة</button>
+                    <button class="btn-pricing" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">اختر الباقة</button>
                 </div>
             </div>
         </div>
@@ -700,6 +761,27 @@
                 </div>
             </div>
         </div>
+        
+        <!-- ===== قسم اتصل بنا ===== -->
+        <div id="contact" class="contact-section">
+            <div class="section-title">
+                <h3>تواصل معنا</h3>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/201501804675" target="_blank">+20 150 180 4675</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+201501804675">+20 150 180 4675</a>
+                </div>
+                <div class="contact-item">
+                    <i class="far fa-envelope"></i>
+                    <a href="mailto:info@dhbsys.com">info@dhbsys.com</a>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- ===== الفوتر ===== -->
@@ -710,7 +792,7 @@
                     <i class="fas fa-gem" style="font-size: 38px; color: #c8a05e;"></i>
                     <h2 style="color: #0f2b4b;">dhbsys</h2>
                 </div>
-                <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المحلات، الإيصال الإلكتروني، وسوق الخضار.</p>
+                <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
             </div>
             <div class="footer-col">
                 <h6>روابط سريعة</h6>
@@ -718,15 +800,15 @@
                     <li><a href="#">الرئيسية</a></li>
                     <li><a href="#pricing">الأسعار</a></li>
                     <li><a href="#faq">الأسئلة الشائعة</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h6>الدعم</h6>
                 <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-phone" style="margin-left: 8px;"></i> +201501804675</a></li>
-                    <li><a href="#"><i class="fas fa-envelope" style="margin-left: 8px;"></i> info@dhbsys.com</a></li>
-                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="https://wa.me/201501804675" target="_blank"><i class="fab fa-whatsapp" style="margin-left: 8px;"></i> واتساب</a></li>
+                    <li><a href="tel:+201501804675"><i class="fas fa-phone" style="margin-left: 8px;"></i> اتصال</a></li>
+                    <li><a href="mailto:info@dhbsys.com"><i class="fas fa-envelope" style="margin-left: 8px;"></i> البريد الإلكتروني</a></li>
                 </ul>
             </div>
         </div>
@@ -736,4 +818,4 @@
     </div>
 
 </body>
-</html>
+                        </html>
