@@ -2,11 +2,11 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>dhbsys | دهب سيستمز - الحلول الذهبية للمحاسبة</title>
-    <!-- Font Awesome 6 (مجاني ومحدث) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dhbsys | دهب سيستمز - جميع الحلول المحاسبية</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- خطوط عصرية -->
+    <!-- Google Fonts - Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -22,7 +22,6 @@
             line-height: 1.6;
         }
 
-        /* الحاوية الأساسية */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -37,7 +36,6 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border-bottom: 1px solid rgba(200,160,94,0.3);
         }
 
         .nav-container {
@@ -57,14 +55,12 @@
         .logo i {
             font-size: 2.2rem;
             color: #c8a05e;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .logo h1 {
             font-size: 1.8rem;
             font-weight: 800;
             color: white;
-            letter-spacing: -0.5px;
         }
 
         .logo span {
@@ -98,7 +94,6 @@
             background: linear-gradient(120deg, #eef2f7 0%, #ffffff 100%);
             padding: 70px 0;
             text-align: center;
-            border-bottom: 1px solid #e2e8f0;
         }
 
         .hero h1 {
@@ -109,7 +104,6 @@
 
         .hero h1 i {
             color: #c8a05e;
-            margin-left: 10px;
         }
 
         .hero p {
@@ -128,19 +122,14 @@
             font-weight: bold;
             display: inline-block;
             transition: 0.3s;
-            border: none;
-            font-size: 1rem;
             font-family: 'Cairo', sans-serif;
-            box-shadow: 0 4px 12px rgba(200,160,94,0.3);
         }
 
         .btn-gold:hover {
             background: #b58b48;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(200,160,94,0.4);
         }
 
-        /* أقسام الأسئلة */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
@@ -165,12 +154,64 @@
             border-radius: 3px;
         }
 
-        .faq-section, .contact-section {
+        /* بطاقات البرامج */
+        .programs-section {
             padding: 70px 0;
             background: white;
         }
 
-        .contact-section {
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border: 1px solid #eef2ff;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+            border-color: #c8a05e;
+        }
+
+        .program-card i {
+            font-size: 50px;
+            color: #c8a05e;
+            margin-bottom: 20px;
+        }
+
+        .program-card h4 {
+            font-size: 1.5rem;
+            color: #0f2b4b;
+            margin-bottom: 15px;
+        }
+
+        .program-card p {
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #c8a05e;
+            background: #fef5e8;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+
+        /* الأسئلة الشائعة */
+        .faq-section {
+            padding: 70px 0;
             background: #f1f5f9;
         }
 
@@ -181,22 +222,19 @@
         }
 
         .faq-item {
-            background: #ffffff;
+            background: white;
             border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s;
-            border: 1px solid #eef2ff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
 
         .faq-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-color: #c8a05e;
+            transform: translateY(-3px);
         }
 
         .faq-item h4 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #0f2b4b;
             margin-bottom: 12px;
             display: flex;
@@ -206,38 +244,33 @@
 
         .faq-item h4 i {
             color: #c8a05e;
-            font-size: 1.5rem;
-        }
-
-        .faq-item p {
-            color: #475569;
-            line-height: 1.7;
-            padding-right: 35px;
         }
 
         /* جهات الاتصال */
+        .contact-section {
+            padding: 70px 0;
+            background: white;
+        }
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 35px;
-            margin-top: 30px;
         }
 
         .contact-item {
-            background: white;
-            padding: 18px 30px;
+            background: #f8fafc;
+            padding: 15px 30px;
             border-radius: 60px;
             display: flex;
             align-items: center;
             gap: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: 0.3s;
             border: 1px solid #e2e8f0;
         }
 
         .contact-item:hover {
-            transform: scale(1.03);
             border-color: #c8a05e;
             background: #fffaf2;
         }
@@ -251,7 +284,6 @@
             text-decoration: none;
             color: #1e293b;
             font-weight: 600;
-            font-size: 1.1rem;
         }
 
         /* الفوتر */
@@ -262,18 +294,22 @@
             border-top: 3px solid #c8a05e;
         }
 
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
         .footer-col {
             flex: 1;
             min-width: 200px;
         }
 
-        .footer-col h2, .footer-col h6 {
-            color: white;
-            margin-bottom: 15px;
-        }
-
         .footer-col h6 {
+            color: white;
             font-size: 1.2rem;
+            margin-bottom: 15px;
             border-right: 3px solid #c8a05e;
             padding-right: 12px;
         }
@@ -292,7 +328,7 @@
             transition: 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .footer-links a:hover {
@@ -305,33 +341,21 @@
             padding: 25px 0;
             margin-top: 40px;
             border-top: 1px solid #1e3a5f;
-            font-size: 0.9rem;
         }
 
-        /* تجاوب */
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                text-align: center;
             }
             .hero h1 {
                 font-size: 2rem;
             }
-            .faq-item p {
-                padding-right: 0;
-            }
-            .contact-info {
+            .footer-content {
                 flex-direction: column;
-                align-items: center;
-            }
-            .container[style*="display: flex"] {
-                flex-direction: column !important;
-                align-items: center;
                 text-align: center;
             }
             .footer-col h6 {
                 border-right: none;
-                text-align: center;
             }
         }
     </style>
@@ -347,7 +371,7 @@
             </div>
             <div class="nav-links">
                 <a href="#">الرئيسية</a>
-                <a href="#pricing">الأسعار</a>
+                <a href="#programs">برامجنا</a>
                 <a href="#faq">الأسئلة الشائعة</a>
                 <a href="#contact">اتصل بنا</a>
             </div>
@@ -358,45 +382,69 @@
     <div class="hero">
         <div class="container">
             <h1><i class="fas fa-chart-line"></i> دهب سيستمز</h1>
-            <p>حلول محاسبية ذكية للمدارس، المحلات، الإيصال الإلكتروني، المخازن وأسواق الخضار. نظام متكامل بإدارة سحابية آمنة.</p>
-            <a href="#pricing" class="btn-gold"><i class="fas fa-gem"></i> ابدأ الآن مجاناً</a>
+            <p>الحلول الذهبية المتكاملة للمحاسبة وإدارة الأعمال. نقدم برامج للمدارس، المستشفيات، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
+            <a href="#programs" class="btn-gold"><i class="fas fa-gem"></i> اكتشف برامجنا</a>
         </div>
     </div>
 
-    <!-- قسم الأسعار -->
-    <div id="pricing" class="faq-section" style="background: #fefcf8;">
+    <!-- ===== قسم جميع البرامج ===== -->
+    <div id="programs" class="programs-section">
         <div class="container">
             <div class="section-title">
-                <h3>خطط تناسب عملك</h3>
+                <h3>جميع حلولنا الذهبية</h3>
             </div>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-                <div style="background: white; border-radius: 28px; padding: 30px; text-align: center; width: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-                    <i class="fas fa-school" style="font-size: 45px; color: #c8a05e;"></i>
-                    <h3 style="margin: 15px 0;">نظام المدارس</h3>
-                    <p>إدارة الطلاب، الدرجات، المصروفات</p>
-                    <p style="font-size: 24px; font-weight: bold; margin-top: 15px;">مجاناً 30 يوم</p>
+            <div class="programs-grid">
+                <!-- 1- برنامج المدارس -->
+                <div class="program-card">
+                    <i class="fas fa-school"></i>
+                    <h4>نظام المدارس</h4>
+                    <p>إدارة الطلاب، الدرجات، المصروفات، جداول الحصص، والتواصل مع أولياء الأمور.</p>
+                    <div class="price-tag">تجربة 30 يوم</div>
                 </div>
-                <div style="background: white; border-radius: 28px; padding: 30px; text-align: center; width: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 2px solid #c8a05e;">
-                    <i class="fas fa-store" style="font-size: 45px; color: #c8a05e;"></i>
-                    <h3 style="margin: 15px 0;">نظام المحلات</h3>
-                    <p>نقطة بيع، مخزون، عملاء</p>
-                    <p style="font-size: 24px; font-weight: bold; margin-top: 15px;">تجربة مجانية</p>
+                <!-- 2- برنامج المستشفى (الذي كان ناقصاً) -->
+                <div class="program-card">
+                    <i class="fas fa-hospital-user"></i>
+                    <h4>نظام المستشفى</h4>
+                    <p>إدارة المرضى، المواعيد، الحجوزات، الملفات الطبية، المخازن الدوائية، والفواتير.</p>
+                    <div class="price-tag">عرض خاص</div>
                 </div>
-                <div style="background: white; border-radius: 28px; padding: 30px; text-align: center; width: 280px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-                    <i class="fas fa-file-invoice" style="font-size: 45px; color: #c8a05e;"></i>
-                    <h3 style="margin: 15px 0;">الإيصال الإلكتروني</h3>
-                    <p>متوافق مع مصلحة الضرائب</p>
-                    <p style="font-size: 24px; font-weight: bold; margin-top: 15px;">اطلب عرض سعر</p>
+                <!-- 3- برنامج المحلات -->
+                <div class="program-card">
+                    <i class="fas fa-store"></i>
+                    <h4>نظام المحلات</h4>
+                    <p>نقطة بيع متكاملة، إدارة المخزون، العملاء، والمبيعات اليومية.</p>
+                    <div class="price-tag">نسخة تجريبية</div>
+                </div>
+                <!-- 4- الإيصال الإلكتروني -->
+                <div class="program-card">
+                    <i class="fas fa-file-invoice"></i>
+                    <h4>الإيصال الإلكتروني</h4>
+                    <p>متوافق مع مصلحة الضرائب المصرية، إصدار فواتير إلكترونية موحدة.</p>
+                    <div class="price-tag">استشارة مجانية</div>
+                </div>
+                <!-- 5- برنامج المخازن -->
+                <div class="program-card">
+                    <i class="fas fa-warehouse"></i>
+                    <h4>نظام المخازن</h4>
+                    <p>إدارة المستودعات، الجرد، حركات الأصناف، وتحليل المخزون.</p>
+                    <div class="price-tag">احصل على عرض</div>
+                </div>
+                <!-- 6- برنامج سوق الخضار -->
+                <div class="program-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h4>سوق الخضار</h4>
+                    <p>نظام خاص بتجار الجملة والتجزئة، إدارة البضائع القابلة للتلف والموردين.</p>
+                    <div class="price-tag">مخصص للأسواق</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- قسم الأسئلة الشائعة (تم ترميمه بالكامل) -->
+    <!-- ===== قسم الأسئلة الشائعة ===== -->
     <div id="faq" class="faq-section">
         <div class="container">
             <div class="section-title">
-                <h3><i class="fas fa-question-circle"></i> الأسئلة الشائعة</h3>
+                <h3>الأسئلة الشائعة</h3>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
@@ -412,18 +460,18 @@
                     <p>بياناتك مشفرة بالكامل ويتم عمل نسخ احتياطي يومي.</p>
                 </div>
                 <div class="faq-item">
-                    <h4><i class="fas fa-cloud-upload-alt"></i> هل النظام سحابي بالكامل؟</h4>
-                    <p>نعم يمكنك الوصول من أي مكان، وأي جهاز متصل بالإنترنت.</p>
+                    <h4><i class="fas fa-cloud-upload-alt"></i> هل النظام سحابي؟</h4>
+                    <p>نعم، يمكنك الوصول من أي مكان عبر الإنترنت.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- قسم اتصل بنا -->
+    <!-- ===== قسم اتصل بنا ===== -->
     <div id="contact" class="contact-section">
         <div class="container">
             <div class="section-title">
-                <h3><i class="fas fa-headset"></i> تواصل معنا</h3>
+                <h3>تواصل معنا</h3>
             </div>
             <div class="contact-info">
                 <div class="contact-item">
@@ -442,36 +490,38 @@
         </div>
     </div>
 
-    <!-- الفوتر (بشكل محسن) -->
+    <!-- ===== الفوتر ===== -->
     <div class="footer">
-        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-            <div class="footer-col">
-                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
-                    <i class="fas fa-gem" style="font-size: 38px; color: #c8a05e;"></i>
-                    <h2 style="color: white;">dhbsys</h2>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+                        <i class="fas fa-gem" style="font-size: 38px; color: #c8a05e;"></i>
+                        <h2 style="color: white;">dhbsys</h2>
+                    </div>
+                    <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المستشفيات، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
                 </div>
-                <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
+                <div class="footer-col">
+                    <h6>روابط سريعة</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#programs">برامجنا</a></li>
+                        <li><a href="#faq">الأسئلة الشائعة</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>الدعم</h6>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/201501804675" target="_blank"><i class="fab fa-whatsapp"></i> واتساب</a></li>
+                        <li><a href="tel:+201501804675"><i class="fas fa-phone"></i> اتصال</a></li>
+                        <li><a href="mailto:info@dhbsys.com"><i class="fas fa-envelope"></i> البريد الإلكتروني</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-col">
-                <h6>روابط سريعة</h6>
-                <ul class="footer-links">
-                    <li><a href="#">الرئيسية</a></li>
-                    <li><a href="#pricing">الأسعار</a></li>
-                    <li><a href="#faq">الأسئلة الشائعة</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
-                </ul>
+            <div class="copyright">
+                © 2025 dhbsys | دهب سيستمز - جميع الحقوق محفوظة.
             </div>
-            <div class="footer-col">
-                <h6>الدعم</h6>
-                <ul class="footer-links">
-                    <li><a href="https://wa.me/201501804675" target="_blank"><i class="fab fa-whatsapp" style="margin-left: 8px;"></i> واتساب</a></li>
-                    <li><a href="tel:+201501804675"><i class="fas fa-phone" style="margin-left: 8px;"></i> اتصال</a></li>
-                    <li><a href="mailto:info@dhbsys.com"><i class="fas fa-envelope" style="margin-left: 8px;"></i> البريد الإلكتروني</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 dhbsys | دهب سيستمز - جميع الحقوق محفوظة.
         </div>
     </div>
 
