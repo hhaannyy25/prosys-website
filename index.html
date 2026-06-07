@@ -199,14 +199,100 @@
             margin-bottom: 20px;
         }
 
-        .price-tag {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #c8a05e;
-            background: #fef5e8;
+        .program-link {
             display: inline-block;
-            padding: 5px 15px;
+            background: #0f2b4b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
             border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .program-link:hover {
+            background: #c8a05e;
+            color: #0f2b4b;
+        }
+
+        /* الأقسام التفصيلية للبرامج */
+        .program-detail {
+            padding: 60px 0;
+            background: #f1f5f9;
+            border-bottom: 1px solid #e2e8f0;
+            scroll-margin-top: 80px;
+        }
+
+        .program-detail:nth-child(even) {
+            background: white;
+        }
+
+        .detail-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .detail-text {
+            flex: 2;
+        }
+
+        .detail-text h3 {
+            font-size: 1.8rem;
+            color: #0f2b4b;
+            margin-bottom: 15px;
+        }
+
+        .detail-text h3 i {
+            color: #c8a05e;
+            margin-left: 10px;
+        }
+
+        .detail-text p {
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .detail-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .detail-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .detail-features li i {
+            color: #c8a05e;
+        }
+
+        .detail-icon {
+            flex: 1;
+            text-align: center;
+            font-size: 120px;
+            color: #c8a05e;
+        }
+
+        @media (max-width: 768px) {
+            .detail-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .detail-features li {
+                justify-content: center;
+            }
+            .nav-container {
+                flex-direction: column;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
         }
 
         /* الأسئلة الشائعة */
@@ -226,11 +312,6 @@
             border-radius: 20px;
             padding: 25px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .faq-item:hover {
-            transform: translateY(-3px);
         }
 
         .faq-item h4 {
@@ -342,22 +423,6 @@
             margin-top: 40px;
             border-top: 1px solid #1e3a5f;
         }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .footer-col h6 {
-                border-right: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -387,7 +452,7 @@
         </div>
     </div>
 
-    <!-- ===== قسم جميع البرامج ===== -->
+    <!-- ===== قسم جميع البرامج (بطاقات مع روابط) ===== -->
     <div id="programs" class="programs-section">
         <div class="container">
             <div class="section-title">
@@ -399,42 +464,182 @@
                     <i class="fas fa-school"></i>
                     <h4>نظام المدارس</h4>
                     <p>إدارة الطلاب، الدرجات، المصروفات، جداول الحصص، والتواصل مع أولياء الأمور.</p>
-                    <div class="price-tag">تجربة 30 يوم</div>
+                    <a href="#school-detail" class="program-link">تفاصيل البرنامج ←</a>
                 </div>
-                <!-- 2- برنامج المستشفى (الذي كان ناقصاً) -->
+                <!-- 2- برنامج المستشفى -->
                 <div class="program-card">
                     <i class="fas fa-hospital-user"></i>
                     <h4>نظام المستشفى</h4>
                     <p>إدارة المرضى، المواعيد، الحجوزات، الملفات الطبية، المخازن الدوائية، والفواتير.</p>
-                    <div class="price-tag">عرض خاص</div>
+                    <a href="#hospital-detail" class="program-link">تفاصيل البرنامج ←</a>
                 </div>
                 <!-- 3- برنامج المحلات -->
                 <div class="program-card">
                     <i class="fas fa-store"></i>
                     <h4>نظام المحلات</h4>
                     <p>نقطة بيع متكاملة، إدارة المخزون، العملاء، والمبيعات اليومية.</p>
-                    <div class="price-tag">نسخة تجريبية</div>
+                    <a href="#shop-detail" class="program-link">تفاصيل البرنامج ←</a>
                 </div>
                 <!-- 4- الإيصال الإلكتروني -->
                 <div class="program-card">
                     <i class="fas fa-file-invoice"></i>
                     <h4>الإيصال الإلكتروني</h4>
                     <p>متوافق مع مصلحة الضرائب المصرية، إصدار فواتير إلكترونية موحدة.</p>
-                    <div class="price-tag">استشارة مجانية</div>
+                    <a href="#einvoice-detail" class="program-link">تفاصيل البرنامج ←</a>
                 </div>
                 <!-- 5- برنامج المخازن -->
                 <div class="program-card">
                     <i class="fas fa-warehouse"></i>
                     <h4>نظام المخازن</h4>
                     <p>إدارة المستودعات، الجرد، حركات الأصناف، وتحليل المخزون.</p>
-                    <div class="price-tag">احصل على عرض</div>
+                    <a href="#warehouse-detail" class="program-link">تفاصيل البرنامج ←</a>
                 </div>
                 <!-- 6- برنامج سوق الخضار -->
                 <div class="program-card">
                     <i class="fas fa-apple-alt"></i>
                     <h4>سوق الخضار</h4>
                     <p>نظام خاص بتجار الجملة والتجزئة، إدارة البضائع القابلة للتلف والموردين.</p>
-                    <div class="price-tag">مخصص للأسواق</div>
+                    <a href="#market-detail" class="program-link">تفاصيل البرنامج ←</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== الأقسام التفصيلية لكل برنامج (الروابط توجه到这里) ===== -->
+
+    <!-- تفاصيل برنامج المدارس -->
+    <div id="school-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-school"></i> نظام المدارس المتكامل</h3>
+                    <p>أحدث نظام لإدارة المدارس يساعدك على أتمتة جميع العمليات الإدارية والأكاديمية بكل سهولة.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> إدارة الطلاب وسجلاتهم كاملة</li>
+                        <li><i class="fas fa-check-circle"></i> نظام الدرجات وكشوف العلامات</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة المصروفات الدراسية والدفعات</li>
+                        <li><i class="fas fa-check-circle"></i> جداول الحصص والمواعيد</li>
+                        <li><i class="fas fa-check-circle"></i> لوحة تحكم لأولياء الأمور</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المدارس" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل برنامج المستشفى -->
+    <div id="hospital-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-hospital-user"></i> نظام إدارة المستشفيات</h3>
+                    <p>حل متكامل لإدارة جميع أقسام المستشفى بدءًا من الاستقبال وحتى الملفات الطبية الإلكترونية.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> إدارة المرضى والمواعيد والحجوزات</li>
+                        <li><i class="fas fa-check-circle"></i> الملفات الطبية الإلكترونية (EMR)</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة المخازن الدوائية والصيدلية</li>
+                        <li><i class="fas fa-check-circle"></i> فواتير المرضى والتقارير المالية</li>
+                        <li><i class="fas fa-check-circle"></i> جدولة العمليات والأطباء</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المستشفى" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل برنامج المحلات -->
+    <div id="shop-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-store"></i> نظام إدارة المحلات (POS)</h3>
+                    <p>نظام نقاط بيع متكامل يدير مبيعاتك ومخزونك وعملاءك من مكان واحد.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> واجهة نقطة بيع سريعة وسهلة</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة المخزون والمنتجات</li>
+                        <li><i class="fas fa-check-circle"></i> نظام العملاء ونقاط الولاء</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير المبيعات والأرباح</li>
+                        <li><i class="fas fa-check-circle"></i> دعم الطابعات الحرارية والإيصال الإلكتروني</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المحلات" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل برنامج الإيصال الإلكتروني -->
+    <div id="einvoice-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-file-invoice"></i> نظام الإيصال الإلكتروني</h3>
+                    <p>متوافق 100% مع متطلبات مصلحة الضرائب المصرية، أصدر فواتير إلكترونية موحدة بسهولة.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> تكامل مع منظومة الفاتورة الإلكترونية</li>
+                        <li><i class="fas fa-check-circle"></i> توقيع إلكتروني وتشفير كامل</li>
+                        <li><i class="fas fa-check-circle"></i> إصدار فواتير ضريبية موحدة</li>
+                        <li><i class="fas fa-check-circle"></i> إرسال الفواتير إلكترونيًا للعملاء</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير ضريبية جاهزة</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20الإيصال%20الإلكتروني" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل برنامج المخازن -->
+    <div id="warehouse-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-warehouse"></i> نظام إدارة المخازن والمستودعات</h3>
+                    <p>تحكم كامل في مخزونك، حركات الأصناف، والجرد الدوري بشكل احترافي.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> إدارة الأصناف والفئات والموردين</li>
+                        <li><i class="fas fa-check-circle"></i> حركات الإدخال والإخراج والتسويات</li>
+                        <li><i class="fas fa-check-circle"></i> نظام الباركود والمسح الضوئي</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير المخزون والجرد الدوري</li>
+                        <li><i class="fas fa-check-circle"></i> تنبيهات بانخفاض المخزون</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المخازن" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تفاصيل برنامج سوق الخضار -->
+    <div id="market-detail" class="program-detail">
+        <div class="container">
+            <div class="detail-content">
+                <div class="detail-text">
+                    <h3><i class="fas fa-apple-alt"></i> نظام سوق الخضار والجملة</h3>
+                    <p>حل مخصص لتجار الجملة والتجزئة للمواد الغذائية والخضروات والفواكه القابلة للتلف.</p>
+                    <ul class="detail-features">
+                        <li><i class="fas fa-check-circle"></i> إدارة البضائع القابلة للتلف والتواريخ</li>
+                        <li><i class="fas fa-check-circle"></i> نظام الميزان المرتبط بالبرنامج</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة الموردين والعملاء (كاش واجل)</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير الأرباح والخسائر اليومية</li>
+                        <li><i class="fas fa-check-circle"></i> دعم الفواتير بالكيلو والقطعة</li>
+                    </ul>
+                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20سوق%20الخضار" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="detail-icon">
+                    <i class="fas fa-apple-alt"></i>
                 </div>
             </div>
         </div>
@@ -508,6 +713,17 @@
                         <li><a href="#programs">برامجنا</a></li>
                         <li><a href="#faq">الأسئلة الشائعة</a></li>
                         <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h6>روابط البرامج</h6>
+                    <ul class="footer-links">
+                        <li><a href="#school-detail"><i class="fas fa-school"></i> نظام المدارس</a></li>
+                        <li><a href="#hospital-detail"><i class="fas fa-hospital-user"></i> نظام المستشفى</a></li>
+                        <li><a href="#shop-detail"><i class="fas fa-store"></i> نظام المحلات</a></li>
+                        <li><a href="#einvoice-detail"><i class="fas fa-file-invoice"></i> الإيصال الإلكتروني</a></li>
+                        <li><a href="#warehouse-detail"><i class="fas fa-warehouse"></i> نظام المخازن</a></li>
+                        <li><a href="#market-detail"><i class="fas fa-apple-alt"></i> سوق الخضار</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
