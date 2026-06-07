@@ -208,12 +208,21 @@
             border-radius: 50px;
             font-weight: 600;
             transition: 0.3s;
-            margin-top: 10px;
+            margin: 5px;
         }
 
         .program-link:hover {
             background: #c8a05e;
             color: #0f2b4b;
+        }
+
+        .run-link {
+            background: #10b981;
+        }
+
+        .run-link:hover {
+            background: #059669;
+            color: white;
         }
 
         /* الأقسام التفصيلية للبرامج */
@@ -279,6 +288,13 @@
             color: #c8a05e;
         }
 
+        .buttons-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
         @media (max-width: 768px) {
             .detail-content {
                 flex-direction: column;
@@ -292,6 +308,9 @@
             }
             .hero h1 {
                 font-size: 2rem;
+            }
+            .buttons-group {
+                justify-content: center;
             }
         }
 
@@ -447,7 +466,7 @@
     <div class="hero">
         <div class="container">
             <h1><i class="fas fa-chart-line"></i> دهب سيستمز</h1>
-            <p>الحلول الذهبية المتكاملة للمحاسبة وإدارة الأعمال. نقدم برامج للمدارس، المستشفيات، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
+            <p>الحلول الذهبية المتكاملة للمحاسبة وإدارة الأعمال. نقدم برامج للمدارس، المستشفيات، الشركات، الإيصال الإلكتروني، المخازن، والمحلات.</p>
             <a href="#programs" class="btn-gold"><i class="fas fa-gem"></i> اكتشف برامجنا</a>
         </div>
     </div>
@@ -464,48 +483,54 @@
                     <i class="fas fa-school"></i>
                     <h4>نظام المدارس</h4>
                     <p>إدارة الطلاب، الدرجات، المصروفات، جداول الحصص، والتواصل مع أولياء الأمور.</p>
-                    <a href="#school-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <a href="#school-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="http://abohany2024-001-site1.jtempurl.com/" target="_blank" class="program-link run-link">تشغيل البرنامج ←</a>
                 </div>
                 <!-- 2- برنامج المستشفى -->
                 <div class="program-card">
                     <i class="fas fa-hospital-user"></i>
                     <h4>نظام المستشفى</h4>
                     <p>إدارة المرضى، المواعيد، الحجوزات، الملفات الطبية، المخازن الدوائية، والفواتير.</p>
-                    <a href="#hospital-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <a href="#hospital-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="http://abohany2024-001-site3.jtempurl.com/" target="_blank" class="program-link run-link">تشغيل البرنامج ←</a>
                 </div>
-                <!-- 3- برنامج المحلات -->
+                <!-- 3- برنامج الشركات -->
                 <div class="program-card">
-                    <i class="fas fa-store"></i>
-                    <h4>نظام المحلات</h4>
-                    <p>نقطة بيع متكاملة، إدارة المخزون، العملاء، والمبيعات اليومية.</p>
-                    <a href="#shop-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <i class="fas fa-building"></i>
+                    <h4>نظام الشركات</h4>
+                    <p>إدارة شؤون الموظفين، الرواتب، حسابات العملاء والموردين، التقارير المالية المتكاملة.</p>
+                    <a href="#company-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="http://abohany2024-001-site5.jtempurl.com/" target="_blank" class="program-link run-link">تشغيل البرنامج ←</a>
                 </div>
                 <!-- 4- الإيصال الإلكتروني -->
                 <div class="program-card">
                     <i class="fas fa-file-invoice"></i>
                     <h4>الإيصال الإلكتروني</h4>
                     <p>متوافق مع مصلحة الضرائب المصرية، إصدار فواتير إلكترونية موحدة.</p>
-                    <a href="#einvoice-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <a href="#einvoice-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="http://abohany2024-001-site2.jtempurl.com/" target="_blank" class="program-link run-link">تشغيل البرنامج ←</a>
                 </div>
                 <!-- 5- برنامج المخازن -->
                 <div class="program-card">
                     <i class="fas fa-warehouse"></i>
                     <h4>نظام المخازن</h4>
                     <p>إدارة المستودعات، الجرد، حركات الأصناف، وتحليل المخزون.</p>
-                    <a href="#warehouse-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <a href="#warehouse-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="http://abohany2024-001-site4.jtempurl.com/" target="_blank" class="program-link run-link">تشغيل البرنامج ←</a>
                 </div>
-                <!-- 6- برنامج سوق الخضار -->
+                <!-- 6- برنامج المحلات -->
                 <div class="program-card">
-                    <i class="fas fa-apple-alt"></i>
-                    <h4>سوق الخضار</h4>
-                    <p>نظام خاص بتجار الجملة والتجزئة، إدارة البضائع القابلة للتلف والموردين.</p>
-                    <a href="#market-detail" class="program-link">تفاصيل البرنامج ←</a>
+                    <i class="fas fa-store"></i>
+                    <h4>نظام المحلات (POS)</h4>
+                    <p>نقطة بيع متكاملة، إدارة المخزون، العملاء، والمبيعات اليومية.</p>
+                    <a href="#shop-detail" class="program-link">تفاصيل البرنامج</a>
+                    <a href="#" class="program-link run-link" style="opacity:0.7;">قريباً ←</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== الأقسام التفصيلية لكل برنامج (الروابط توجه到这里) ===== -->
+    <!-- ===== الأقسام التفصيلية لكل برنامج ===== -->
 
     <!-- تفاصيل برنامج المدارس -->
     <div id="school-detail" class="program-detail">
@@ -521,7 +546,10 @@
                         <li><i class="fas fa-check-circle"></i> جداول الحصص والمواعيد</li>
                         <li><i class="fas fa-check-circle"></i> لوحة تحكم لأولياء الأمور</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المدارس" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="http://abohany2024-001-site1.jtempurl.com/" target="_blank" class="btn-gold">تشغيل البرنامج مباشرة <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المدارس" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
                     <i class="fas fa-school"></i>
@@ -544,7 +572,10 @@
                         <li><i class="fas fa-check-circle"></i> فواتير المرضى والتقارير المالية</li>
                         <li><i class="fas fa-check-circle"></i> جدولة العمليات والأطباء</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المستشفى" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="http://abohany2024-001-site3.jtempurl.com/" target="_blank" class="btn-gold">تشغيل البرنامج مباشرة <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المستشفى" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
                     <i class="fas fa-hospital-user"></i>
@@ -553,24 +584,27 @@
         </div>
     </div>
 
-    <!-- تفاصيل برنامج المحلات -->
-    <div id="shop-detail" class="program-detail">
+    <!-- تفاصيل برنامج الشركات -->
+    <div id="company-detail" class="program-detail">
         <div class="container">
             <div class="detail-content">
                 <div class="detail-text">
-                    <h3><i class="fas fa-store"></i> نظام إدارة المحلات (POS)</h3>
-                    <p>نظام نقاط بيع متكامل يدير مبيعاتك ومخزونك وعملاءك من مكان واحد.</p>
+                    <h3><i class="fas fa-building"></i> نظام إدارة الشركات (ERP)</h3>
+                    <p>نظام متكامل لإدارة جميع موارد الشركة من حسابات وموظفين ومخازن ومشتريات ومبيعات.</p>
                     <ul class="detail-features">
-                        <li><i class="fas fa-check-circle"></i> واجهة نقطة بيع سريعة وسهلة</li>
-                        <li><i class="fas fa-check-circle"></i> إدارة المخزون والمنتجات</li>
-                        <li><i class="fas fa-check-circle"></i> نظام العملاء ونقاط الولاء</li>
-                        <li><i class="fas fa-check-circle"></i> تقارير المبيعات والأرباح</li>
-                        <li><i class="fas fa-check-circle"></i> دعم الطابعات الحرارية والإيصال الإلكتروني</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة شؤون الموظفين والرواتب</li>
+                        <li><i class="fas fa-check-circle"></i> حسابات العملاء والموردين</li>
+                        <li><i class="fas fa-check-circle"></i> القيود المحاسبية والتقارير المالية</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة الأصول الثابتة والإهلاكات</li>
+                        <li><i class="fas fa-check-circle"></i> شجرة حسابات كاملة</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المحلات" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="http://abohany2024-001-site5.jtempurl.com/" target="_blank" class="btn-gold">تشغيل البرنامج مباشرة <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20الشركات" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
-                    <i class="fas fa-store"></i>
+                    <i class="fas fa-building"></i>
                 </div>
             </div>
         </div>
@@ -590,7 +624,10 @@
                         <li><i class="fas fa-check-circle"></i> إرسال الفواتير إلكترونيًا للعملاء</li>
                         <li><i class="fas fa-check-circle"></i> تقارير ضريبية جاهزة</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20الإيصال%20الإلكتروني" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="http://abohany2024-001-site2.jtempurl.com/" target="_blank" class="btn-gold">تشغيل البرنامج مباشرة <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20الإيصال%20الإلكتروني" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
                     <i class="fas fa-file-invoice"></i>
@@ -613,7 +650,10 @@
                         <li><i class="fas fa-check-circle"></i> تقارير المخزون والجرد الدوري</li>
                         <li><i class="fas fa-check-circle"></i> تنبيهات بانخفاض المخزون</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المخازن" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="http://abohany2024-001-site4.jtempurl.com/" target="_blank" class="btn-gold">تشغيل البرنامج مباشرة <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المخازن" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
                     <i class="fas fa-warehouse"></i>
@@ -622,24 +662,27 @@
         </div>
     </div>
 
-    <!-- تفاصيل برنامج سوق الخضار -->
-    <div id="market-detail" class="program-detail">
+    <!-- تفاصيل برنامج المحلات -->
+    <div id="shop-detail" class="program-detail">
         <div class="container">
             <div class="detail-content">
                 <div class="detail-text">
-                    <h3><i class="fas fa-apple-alt"></i> نظام سوق الخضار والجملة</h3>
-                    <p>حل مخصص لتجار الجملة والتجزئة للمواد الغذائية والخضروات والفواكه القابلة للتلف.</p>
+                    <h3><i class="fas fa-store"></i> نظام إدارة المحلات (POS)</h3>
+                    <p>نظام نقاط بيع متكامل يدير مبيعاتك ومخزونك وعملاءك من مكان واحد.</p>
                     <ul class="detail-features">
-                        <li><i class="fas fa-check-circle"></i> إدارة البضائع القابلة للتلف والتواريخ</li>
-                        <li><i class="fas fa-check-circle"></i> نظام الميزان المرتبط بالبرنامج</li>
-                        <li><i class="fas fa-check-circle"></i> إدارة الموردين والعملاء (كاش واجل)</li>
-                        <li><i class="fas fa-check-circle"></i> تقارير الأرباح والخسائر اليومية</li>
-                        <li><i class="fas fa-check-circle"></i> دعم الفواتير بالكيلو والقطعة</li>
+                        <li><i class="fas fa-check-circle"></i> واجهة نقطة بيع سريعة وسهلة</li>
+                        <li><i class="fas fa-check-circle"></i> إدارة المخزون والمنتجات</li>
+                        <li><i class="fas fa-check-circle"></i> نظام العملاء ونقاط الولاء</li>
+                        <li><i class="fas fa-check-circle"></i> تقارير المبيعات والأرباح</li>
+                        <li><i class="fas fa-check-circle"></i> دعم الطابعات الحرارية والإيصال الإلكتروني</li>
                     </ul>
-                    <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20سوق%20الخضار" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    <div class="buttons-group">
+                        <a href="#" class="btn-gold" style="opacity:0.7; cursor:default;">قريباً <i class="fas fa-clock"></i></a>
+                        <a href="https://wa.me/201501804675?text=أريد%20تفاصيل%20برنامج%20المحلات" class="btn-gold" target="_blank">اطلب عرض سعر <i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="detail-icon">
-                    <i class="fas fa-apple-alt"></i>
+                    <i class="fas fa-store"></i>
                 </div>
             </div>
         </div>
@@ -704,7 +747,7 @@
                         <i class="fas fa-gem" style="font-size: 38px; color: #c8a05e;"></i>
                         <h2 style="color: white;">dhbsys</h2>
                     </div>
-                    <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المستشفيات، المحلات، الإيصال الإلكتروني، المخازن، وسوق الخضار.</p>
+                    <p>دهب سيستمز - الحلول الذهبية للمحاسبة. نقدم برامج متكاملة للمدارس، المستشفيات، الشركات، الإيصال الإلكتروني، المخازن، والمحلات.</p>
                 </div>
                 <div class="footer-col">
                     <h6>روابط سريعة</h6>
@@ -718,12 +761,11 @@
                 <div class="footer-col">
                     <h6>روابط البرامج</h6>
                     <ul class="footer-links">
-                        <li><a href="#school-detail"><i class="fas fa-school"></i> نظام المدارس</a></li>
-                        <li><a href="#hospital-detail"><i class="fas fa-hospital-user"></i> نظام المستشفى</a></li>
-                        <li><a href="#shop-detail"><i class="fas fa-store"></i> نظام المحلات</a></li>
-                        <li><a href="#einvoice-detail"><i class="fas fa-file-invoice"></i> الإيصال الإلكتروني</a></li>
-                        <li><a href="#warehouse-detail"><i class="fas fa-warehouse"></i> نظام المخازن</a></li>
-                        <li><a href="#market-detail"><i class="fas fa-apple-alt"></i> سوق الخضار</a></li>
+                        <li><a href="http://abohany2024-001-site1.jtempurl.com/" target="_blank"><i class="fas fa-school"></i> نظام المدارس</a></li>
+                        <li><a href="http://abohany2024-001-site3.jtempurl.com/" target="_blank"><i class="fas fa-hospital-user"></i> نظام المستشفى</a></li>
+                        <li><a href="http://abohany2024-001-site5.jtempurl.com/" target="_blank"><i class="fas fa-building"></i> نظام الشركات</a></li>
+                        <li><a href="http://abohany2024-001-site2.jtempurl.com/" target="_blank"><i class="fas fa-file-invoice"></i> الإيصال الإلكتروني</a></li>
+                        <li><a href="http://abohany2024-001-site4.jtempurl.com/" target="_blank"><i class="fas fa-warehouse"></i> نظام المخازن</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
